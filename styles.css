@@ -1,0 +1,423 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(90deg, #fcdc1d, #eccd9c); 
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: rgba(67, 93, 118, 1); /* Azul oscuro */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Dorado claro */
+}
+
+/* Sección principal */
+.main-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.title-image {
+    max-width: 80%; /* Mantén el tamaño actual */
+    margin-bottom: 30px; /* Ajusta el margen inferior para crear separación */
+}
+
+.mi-cuaderno-title {
+    max-width: 80%; /* Mantén el tamaño actual */
+    margin-top: 30px; /* Ajusta el margen superior para crear separación */
+}
+
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.zoe-image {
+    max-width: 250px;
+    border-radius: 15px;
+}
+
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; /* Ajusta los botones hacia la izquierda */
+}
+
+.btn-buy, .btn-play {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    width: 180px; /* Anchura consistente */
+    text-align: center;
+}
+
+.btn-buy {
+    background-color: #177277;
+}
+
+.btn-buy:hover {
+    background-color: #145e60;
+}
+
+.btn-play {
+    background-color: #9aa6a5;
+}
+
+.btn-play:hover {
+    background-color: #8a9493;
+}
+
+/* Juegos del Parque */
+.juegos-section {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-color: #f9efd2;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.game-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-buy, .btn-play {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-buy {
+    background-color: #177277;
+}
+
+.btn-buy:hover {
+    background-color: #145e60;
+}
+
+.btn-play {
+    background-color: #9aa6a5;
+}
+
+.btn-play:hover {
+    background-color: #8a9493;
+}
+.game-button {
+    background-color: #FFD700;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-button:hover {
+    background-color: #FF914D;
+}
+
+/* Juegos emergentes */
+.game-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9efd2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.game-container img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/close.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 300;
+    padding: 0;
+}
+
+.close-button:hover {
+    transform: scale(1.1);
+}
+
+/* Adaptabilidad */
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title-image {
+        max-width: 400px !important; /* Fija un ancho máximo */
+        width: 100%; /* Escala según el contenedor */
+        height: auto; /* Mantén la proporción */
+        overflow: hidden; /* Oculta contenido desbordante */
+        margin-top: 90px; /* Ajusta el espacio superior */
+    }
+    .tira-image {
+        display: block;
+        margin: 20px auto; /* Centra la imagen y añade un margen superior */
+        max-width: 80%; /* Asegura que la imagen no supere el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    .text-content {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        line-height: 1.4; /* Espaciado ajustado para mejor legibilidad */
+        max-width: 90%; /* Reducir el ancho del contenedor */
+        margin: 0 auto; /* Centrar el texto en pantalla */
+        background-size: 100% auto; /* Ajustar el tamaño del papel al texto */
+        padding: 20px; /* Espaciado interno adecuado */
+    }
+    .book-image {
+        max-width: 200px; /* Reducir el tamaño del libro */
+    }
+
+    .titulo-juegos {
+        max-width: 80%; /* Hacer más pequeño el título de los juegos */
+    }
+
+    .grid-container {
+        display: flex; /* Cambiar a diseño flex */
+        flex-direction: column; /* Mostrar los elementos en columna */
+        align-items: center; /* Centrar horizontalmente */
+        gap: 15px; /* Añadir espacio entre los elementos */
+        max-width: 90%; /* Asegurar que todo el contenedor esté dentro de la pantalla */
+        margin: 0 auto; /* Centrar el contenedor */
+    }
+    .grid-item {
+        width: 200px; /* Reducir tamaño del contenedor de los juegos */
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar el contenido verticalmente */
+        align-items: center; /* Centrar el contenido horizontalmente */
+    }
+    
+
+    .game-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .game-container {
+        width: 90%; /* Reducir el tamaño del contenedor emergente */
+        padding: 15px; /* Menor espacio interno */
+    }
+ /* Ocultar GIF de Zoe */
+ .zoe-image {
+    display: none;
+}
+@media (max-width: 480px) {
+    .title-image {
+        max-width: 300px !important; /* Fija un ancho máximo */
+        width: 100%; /* Escala según el contenedor */
+        height: auto; /* Mantén la proporción */
+        overflow: hidden; /* Oculta contenido desbordante */
+        margin-top: 90px; /* Ajusta el espacio superior */
+    }
+    .text-content {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        line-height: 1.4; /* Espaciado ajustado para mejor legibilidad */
+        max-width: 80%!important; /* Reducir el ancho del contenedor */
+        margin: 0 auto; /* Centrar el texto en pantalla */
+        background-size: 100% auto; /* Ajustar el tamaño del papel al texto */
+        padding: 20px; /* Espaciado interno adecuado */
+    }
+}
+@media (max-width: 360px) {
+    .title-image {
+        max-width: 300px !important; /* Fija un ancho máximo */
+        width: 100%; /* Escala según el contenedor */
+        height: auto; /* Mantén la proporción */
+        overflow: hidden; /* Oculta contenido desbordante */
+        margin-top: 90px; /* Ajusta el espacio superior */
+    }
+    .text-content {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        line-height: 1.4; /* Espaciado ajustado para mejor legibilidad */
+        max-width: 70%!important; /* Reducir el ancho del contenedor */
+        margin: 0 auto; /* Centrar el texto en pantalla */
+        background-size: 100% auto; /* Ajustar el tamaño del papel al texto */
+        padding: 20px; /* Espaciado interno adecuado */
+    }
+}
+
+}
+.tira-image {
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+    max-width: 120%; /* Amplía ligeramente el ancho máximo */
+    height: auto; /* Mantiene la proporción */
+}
+
+.text-content {
+    background-image: url('images/tira.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Hace que la imagen ocupe todo el espacio del contenedor */
+    padding: 80px; /* Añade más espacio alrededor del texto */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    line-height: 1.8; /* Mejora la legibilidad */
+    max-width: 90%; /* Asegura que el texto no supere el contenedor */
+    margin: 0 auto; /* Centra el texto */
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+}
+
+.mariposa {
+    position: absolute;
+    top: 80px; /* Ajusta esta posición dependiendo del espacio entre la barra y el contenido */
+    left: 20px; /* Ajusta la distancia del borde izquierdo */
+    transform: rotate(-9deg); /* Rota la imagen -9 grados */
+    width: 150px; /* Tamaño de la mariposa */
+    height: auto; /* Mantén la proporción */
+    z-index: 100; /* Asegúrate de que quede por encima del fondo */
+}
+.gato-image {
+    position: absolute;
+    bottom: 10px; /* Ajusta según el margen deseado desde la parte inferior */
+    right: 10px; /* Ajusta según el margen deseado desde la parte derecha */
+    width: 200px; /* Ajusta el tamaño del gato */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+.flor-image {
+    position: absolute; /* Posiciona la flor en relación con la sección */
+    left: -100px; /* Mueve la flor 100px hacia fuera del contenedor por el lado izquierdo */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta para que quede perfectamente centrada */
+    width: 600px; /* Tamaño de la flor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+.admiracion-image {
+    position: absolute; /* Posiciona la imagen dentro del contenedor del cuadrado */
+    left: 350px; /* Desplaza la imagen hacia el extremo izquierdo */
+    top: 50%; /* Centra verticalmente respecto al cuadrado */
+    transform: translateY(-50%); /* Ajusta la posición al centro exacto */
+    width: 200px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 10; /* Asegura que esté visible */
+}
+
+@media (max-width: 1024px) {
+    .zoe-image, .gato-image, .flor-image, .mariposa {
+        display: none; /* Oculta estos elementos en dispositivos con pantallas de 1024px o menores */
+    }
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: rgba(67, 93, 118, 1); /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 30px 20px; /* Espaciado interno */
+    margin-top: 50px; /* Espaciado superior */
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.footer p {
+    margin: 5px 0; /* Espaciado entre párrafos */
+}

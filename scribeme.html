@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Scríbeme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet"> <!-- Fuente Suez One -->
+    <style>
+        /* General */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('images/fondoscribeme.png') no-repeat center center fixed; /* Fondo ajustado */
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: rgba(67, 93, 118, 1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .navbar li {
+            margin: 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column; /* Cambiar a columna */
+                align-items: center; /* Centrar los enlaces */
+                gap: 15px; /* Espaciado entre elementos */
+            }
+            .navbar a {
+                font-size: 14px; /* Reducir un poco el tamaño de la fuente */
+            }
+            .navbar {
+                padding: 10px 0; /* Reducir padding para móviles */
+            }
+        }
+
+        /* Título */
+        .title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            font-size: 48px;
+            margin: 80px 0 20px;
+            text-shadow: 2px 2px 0px #FF4D4D; /* Borde rojo */
+        }
+
+        /* Papel de carta */
+        .main-section {
+            flex: 1; /* El contenido principal toma el espacio disponible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+            padding: 50px 40px; /* Espaciado interno */
+            font-size: 20px; /* Tamaño de fuente más grande */
+            line-height: 1.8; /* Espaciado entre líneas */
+            color: #333;
+            font-family: 'Dancing Script', cursive;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+            text-align: justify; /* Justificar el texto para mejor legibilidad */
+            margin: 20px auto; /* Centramos con márgenes */
+            max-width: 600px; /* Limitar ancho máximo */
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                width: 100%; /* Ajusta el ancho para tablets y pantallas medianas */
+                font-size: 16px; /* Reducir ligeramente el tamaño del texto */
+                line-height: 1.6; /* Ajustar el espaciado */
+                padding: 60px 20px; /* Reducir padding interno */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                width: 100%; /* Ajuste para pantallas pequeñas */
+                font-size: 14px; /* Reducir tamaño del texto */
+                line-height: 1.5; /* Espaciado más compacto */
+                padding: 40px 15px; /* Reducir padding interno */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-wrapper {
+                width: 100%; /* Ocupar todo el ancho en móviles */
+                font-size: 12px; /* Reducir aún más el tamaño del texto */
+                padding: 20px 10px; /* Padding interno más reducido */
+            }
+        }
+
+        /* Botón redondeado */
+        .external-link {
+            display: block;
+            margin: 30px auto; /* Margen ajustado para separarlo del contenido */
+            text-align: center;
+            padding: 15px 30px;
+            background-color: #FF4D4D; /* Color rojo como el borde del título */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 50px; /* Más redondeado */
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+            width: 150px; /* Centrar botón con tamaño fijo */
+        }
+        .external-link:hover {
+            background-color: #D13B3B; /* Más oscuro al pasar el cursor */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: rgba(67, 93, 118, 1); /* Azul oscuro */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            margin-top: auto; /* Empuja el footer al final */
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                font-size: 12px; /* Reduce el tamaño del texto */
+                padding: 15px; /* Ajusta el espacio */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+            <li><a href="parque-zoe.html">El Cuaderno Mágico de Zoe</a></li>
+            <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
+            <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título -->
+    <h1 class="title">Scribeme.net</h1>
+
+    <!-- Contenido principal -->
+    <section class="main-section">
+        <div class="content-wrapper">
+            <p>
+                Si sueñas con conectar con un personaje de cuento de hadas o anime 
+                o tal vez entrar en el mundo de la ficción y tener un amigo o amante 
+                de una dimensión mágica, entonces Scribeme.net es para ti. Scribeme.net tiene como objeto romper las barreras entre 
+                la ficción y la realidad mediante la confección de cartas personalizadas de personajes 
+                de ficción, logrando ser parte de sus historias.
+            </p>
+        </div>
+    </section>
+
+    <!-- Botón -->
+    <a href="https://www.scribeme.net" target="_blank" class="external-link">Visitar</a>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© Website de Bárbara N. Giménez.</p>
+        <p>Contacto: info@scribeme.net</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Basilea - Suiza 2024</p>
+    </footer>
+</body>
+</html>

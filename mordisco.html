@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mordisco de la Polilla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Barra de navegación */
+        .navbar {
+            background-color: rgba(67, 93, 118, 1); /* Azul oscuro */
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .navbar li {
+            margin: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Playfair Display', serif; /* Fuente elegante */
+            font-size: 15px; /* Tamaño del texto */
+            font-weight: 500; /* Peso medio */
+            letter-spacing: 1px; /* Espaciado entre letras */
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #FFD700; /* Dorado claro */
+        }
+    /* Responsivo para móvil */
+    @media (max-width: 768px) {
+        .navbar ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar a {
+            font-size: 14px; /* Tamaño reducido en móviles */
+        }
+        .title-container {
+            text-align: center;
+            margin-top: 90px; /* Espaciado debajo del título */
+        }
+
+        .title-image {
+            width: 100%;
+            max-width: 400px; /* Tamaño del título */
+        }
+    }
+        /* Fondo graduado */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #FFDE59, #FF914D);
+            overflow-x: hidden;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+            min-height: 100vh;
+            padding: 40px 20px; /* Espaciado para mover los elementos hacia abajo */
+            background-image: url("images/fondopolilla.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 30px; /* Espaciado debajo del título */
+        }
+
+        .title-image {
+            width: 100%;
+            max-width: 400px; /* Tamaño del título */
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px; /* Reducir el ancho del contenido */
+        }
+
+        .content-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            line-height: 1.8;
+            color: rgb(255, 255, 255);
+            text-align: justify;
+            background: none; /* Fondo semitransparente */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px; /* Espaciado debajo del texto */
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #435d76; /* Azul oscuro */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e60000; /* Cambiar a rojo oscuro */
+        }
+        /* Estilo del GIF ojo */
+        .gif-container {
+            position: fixed;
+            top: 10%; /* Aproximadamente antes del centro */
+            left: 4%; /* Movido más hacia el centro */
+            z-index: 1100; /* Por encima de la barra de navegación */
+            transform: rotate(-23deg); /* Inclinación del GIF */
+        }
+
+        .gif-container img {
+            width: 150px; /* Ancho especificado */
+            height: 150px; /* Alto especificado */
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+        .gif-container {
+            display: none; /* Oculta la polilla */
+        }
+    }
+            /* Pie de página */
+            footer {
+            background-color: rgba(67, 93, 118, 1);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+            <li><a href="parque-zoe.html">El Cuaderno Mágico de Zoe</a></li>
+            <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
+            <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+        </ul>
+    </nav>
+   <!-- GIF en el lado izquierdo -->
+   <div class="gif-container">
+    <img src="images/ojo.gif" alt="GIF ojo">
+</div>
+    <section class="main-section">
+        <!-- Contenedor del título -->
+        <div class="title-container">
+            <img src="images/polillatitulo.png" alt="El Mordisco de la Polilla" class="title-image">
+        </div>
+        <!-- Contenedor del texto -->
+        <div class="content">
+            <div class="content-text">
+                Desde sardinas con sueños de grandeza hasta dioses y misterios escondidos en lo ordinario del día a día, cada relato te sumergirá en una atmósfera mágica cargada de ironía, imaginación y sorpresas.  
+                Una colección que desafía el mundo que conocemos y celebra lo extraordinario en lo cotidiano.
+            </div>
+            <button onclick="window.open('https://example.com', '_blank')">Próximamente</button>
+        </div>
+    </section>
+      <!-- Pie de página -->
+      <footer>
+        <p>© Website de Bárbara N. Giménez.</p>
+        <p>Contacto: info@scribeme.net</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Basilea - Suiza 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Parque de Zoe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        footer {
+            background-color: rgba(67, 93, 118, 1);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+        <li><a href="parque-zoe.html">El Cuaderno Mágico de Zoe</a></li>
+        <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
+        <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+    </ul>
+</nav>
+
+<!-- Primera sección -->
+<section id="cuaderno" class="main-section" style="padding: 80px; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 40px;">
+    <!-- Imagen del título -->
+    <div style="flex: 1 1 100%; text-align: center;">    
+        <div style="flex: 1 1 100%; text-align: center;">
+        <img src="images/title.png" alt="El Parque de Zoe" class="title-image" style="max-width: 500px; margin-bottom: 20px;">
+        <img src="images/micuaderno.png" alt="Mi Cuaderno" class="mi-cuaderno-title" style="max-width: 400px; margin-top: 10px;">
+        <img src="images/mariposa.png" alt="Mariposa" class="mariposa">
+    </div>
+
+    <!-- Contenedor del libro y el texto -->
+    <div class="book-section" style="display: flex; flex: 1 1 100%; gap: 40px; align-items: flex-start; justify-content: center;">
+        <!-- Imagen del libro -->
+        <img src="images/libro.png" alt="Libro" class="book-image" style="max-width: 300px; flex-shrink: 0; margin-top: 15px;">
+
+        <!-- Texto descriptivo -->
+        <div class="text-content" style="max-width: 500px; text-align: justify; font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #333; position: relative;">
+            <p>¿Alguna vez has querido descubrir tu futuro, saber si tu crush es el indicado o simplemente divertirte con juegos llenos de magia y risas?</p>
+            <p>Acompaña a Zoe en un viaje lleno de aventuras interactivas, donde los juegos de amor, los secretos mágicos y las historias personales se mezclan para crear una experiencia única. Desde predicciones sobre tu destino hasta trucos y desafíos que pondrán a prueba tu ingenio, este cuaderno es más que un libro: es una puerta a un mundo de diversión y descubrimientos.</p>
+        </div>
+              
+            <img src="images/zoe.gif" alt="Zoe" class="zoe-image">
+            <div class="buttons-container" style="display: flex; gap: 1px; margin-top: -5px;">
+                <a href="#" class="btn-buy" style="padding: 12px 25px; background-color: #177277; color: white; text-decoration: none; border-radius: 25px; font-size: 16px;">Comprar</a>
+                <a href="#juegos" class="btn-play" style="padding: 12px 25px; background-color: #9aa6a5; color: white; text-decoration: none; border-radius: 25px; font-size: 16px;">Jugar</a>
+            </div>
+    </section>
+
+    <!-- Segunda sección (Juegos) -->
+    <section id="juegos" class="juegos-section">
+        <!-- Imagen de la flor -->
+        <img src="images/flor.png" alt="Flor" class="flor-image">
+        
+        <img src="images/juegosdelparque.png" alt="Juegos del Parque" class="titulo-juegos">
+        <div class="grid-container">
+            <!-- Botones conectados con JavaScript -->
+            <div class="grid-item">
+                <img src="images/cookie.gif" alt="Galleta de la Fortuna" class="game-image">
+                <button class="game-button" onclick="showGame('fortuneGame')">Galleta de la Fortuna</button>
+            </div>
+            <div class="grid-item" style="position: relative;">
+                <img src="images/compatibility-icon.gif" alt="Compatibilidad" class="game-image">
+                <button class="game-button" onclick="showGame('compatibilityGame')">Juego de Compatibilidad</button>
+            </div>
+            <div class="grid-item">
+                <img src="images/prediction-icon.gif" alt="Oráculo" class="game-image">
+                <button class="game-button" onclick="showGame('oracleGame')">Oráculo de Sí o No</button>
+            </div>
+            <div class="grid-item">
+                <img src="images/specialdate-icon.gif" alt="Fecha Especial" class="game-image">
+                <button class="game-button" onclick="showGame('specialDateGame')">Fecha Especial</button>
+            </div>
+        </div>
+        <!-- Imagen del gato -->
+        <img src="images/gato.png" alt="Gato" class="gato-image">
+    </section>
+    
+    
+
+    <!-- Juegos emergentes -->
+    <div class="game-container" id="fortuneGame">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <h1>Galleta de la Fortuna</h1>
+        <img id="thinkingImage" src="images/thinking-icon.gif" alt="Pensando...">
+        <img id="predictionImage" src="" alt="Predicción">
+    </div>
+
+    <!-- Compatibilidad -->
+<!-- Juego de Compatibilidad -->
+<div class="game-container" id="compatibilityGame">
+    <button class="close-button" onclick="closeGame()">×</button>
+    <h1>Juego de Compatibilidad</h1>
+    <input id="yourName" type="text" placeholder="Tu nombre">
+    <input id="crushName" type="text" placeholder="Nombre de tu crush">
+    <img id="thinkingImageCompatibility" src="images/thinking-icon.gif" alt="Pensando..." style="display: none;">
+    <button id="calculateCompatibility" class="game-button">Calcular</button>
+    <p id="compatibilityResult"></p>
+</div>
+
+<!-- Fecha Especial -->
+<div class="game-container" id="specialDateGame">
+    <button class="close-button" onclick="closeGame()">×</button>
+    <h1>Fecha Especial</h1>
+    <img id="thinkingImageSpecialDate" src="images/thinking-icon.gif" alt="Pensando..." style="display: none;">
+    <button id="discoverDateButton" class="game-button">Descubrir</button>
+    <div id="specialDateResult" style="display: none;">
+        <h3>Fecha: <span id="specialDate"></span></h3>
+        <h3>Evento: <span id="eventType"></span></h3>
+    </div>
+</div>
+
+
+    <div class="game-container" id="oracleGame">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <h1>Oráculo de Sí o No</h1>
+        <img id="thinkingImageOracle" src="images/thinking-icon.gif" alt="Pensando...">
+        <img id="oracleAnswerImage" src="" alt="Respuesta">
+    </div>
+
+    <div class="game-container" id="specialDateGame">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <h1>Fecha Especial</h1>
+        <button id="discoverDateButton" class="game-button">Descubrir</button>
+        <div id="specialDateResult">
+            <h3>Fecha: <span id="specialDate"></span></h3>
+            <h3>Evento: <span id="eventType"></span></h3>
+        </div>
+    </div>
+ <!-- Pie de página -->
+ <footer>
+    <p>© Website de Bárbara N. Giménez.</p>
+    <p>Contacto: info@scribeme.net</p>
+    <p>Todos los derechos reservados.</p>
+    <p>Basilea - Suiza 2024</p>
+</footer>
+    <!-- Script cargado después del HTML -->
+    <script src="script.js"></script>
+</body>
+</html>

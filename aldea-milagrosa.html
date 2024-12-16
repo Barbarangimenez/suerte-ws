@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Aldea Milagrosa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #7f9288; /* Fondo verde claro */
+            overflow-x: hidden;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: rgba(67, 93, 118, 1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .navbar li {
+            margin: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #FFD700;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            margin-top: 70px; /* Espacio debajo de la barra de navegación */
+            position: relative;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Imagen Olivar */
+        #olivar {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 400px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        /* Imagen Casas */
+        #casas {
+            position: absolute;
+            bottom: 100px;
+            left: 10%;
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        /* Imagen Panes */
+        #panes {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        /* Imagen Libro */
+        #libro {
+            position: absolute;
+            top: 40%;
+            right: 20%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #libro::after {
+            content: "Este libro cuenta la historia";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 12px;
+            font-family: 'Arial', sans-serif;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #libro:hover::after {
+            opacity: 1;
+        }
+
+        /* Texto al lado del libro */
+        #texto {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            max-width: 400px;
+            text-align: left;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Botón de compra */
+        .boton-compra {
+            display: block;
+            padding: 10px 20px;
+            background-color: #435d76;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px; /* Separación del texto */
+            cursor: pointer;
+        }
+
+        .boton-compra:hover {
+            background-color: #2c4358;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: rgba(67, 93, 118, 1);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Cambios para versión móvil */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            #texto {
+                position: relative; /* Cambiar a relativo para móviles */
+                top: auto;
+                left: auto;
+                transform: none;
+                max-width: 90%;
+                margin: 0 auto;
+                font-size: 14px;
+                text-align: justify;
+                margin-top: 70px;
+            }
+
+            #libro {
+    position: relative; /* Cambia de absolute a relative */
+    top: 0; /* Elimina desplazamientos verticales */
+    left: 0; /* Elimina desplazamientos horizontales */
+    transform: none; /* Quita transformaciones */
+    width: 70%; /* Tamaño ajustado */
+    max-width: 200px; /* Limita el tamaño */
+    margin: 0 auto; /* Centra completamente en horizontal */
+    margin-top: 230px; /* Ajusta separación superior */
+    display: flex; /* Asegura flexibilidad */
+    justify-content: center; /* Centra en flexbox */
+}
+
+            #casas {
+                position: relative;
+                width: 90%;
+                max-width: 300px;
+                margin: 20px auto;
+                margin-top: 90px;
+                height: auto;
+            }
+
+            #panes {
+                display: none;
+            }
+
+            .boton-compra {
+                margin: 20px auto;
+                width: 80%;
+                max-width: 200px;
+            }
+        }
+
+        /* Cambios para tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #texto {
+                max-width: 80%;
+                margin: 20px auto;
+                font-size: 16px;
+                text-align: justify;
+                margin-top: 120px;
+            }
+
+            #libro {
+                width: 60%;
+                max-width: 250px;
+                margin: 0 auto;
+                margin-top: 200px;
+            }
+
+            #casas {
+                width: 90%;
+                max-width: 600px;
+                margin: 20px auto;
+                margin-top: 120px;
+            }
+            /* Para iPad Mini (generalmente con ancho de 768px en orientación vertical) */
+@media (min-width: 600px) and (max-width: 768px) {
+    #texto {
+        position: relative;
+        top: 20%;
+        left: auto;
+        transform: none;
+        font-size: 18px;
+        max-width: 90%;
+        text-align: center;
+        margin: 20px auto;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .boton-compra {
+        display: block;
+        padding: 10px 20px;
+        background-color: #435d76;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    #libro {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 190px;
+        width: 60%;
+        height: auto;
+    }
+
+    #casas {
+        position: relative; /* Para mantener un flujo normal */
+        display: block;
+        margin: 50px auto; /* Esto centra el elemento horizontalmente */
+        width: 80%; /* Ajusta el ancho */
+        height: auto; /* Mantiene la proporción */
+        text-align: center; /* Esto asegura que el contenido interno esté centrado si tiene texto */
+    }
+}
+
+/* Para Nest Hub (entre 800px y 1024px en orientación horizontal) */
+@media (min-width: 800px) and (max-width: 1024px) {
+    #texto {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        max-width: 400px;
+        text-align: left !important;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .boton-compra {
+        display: block;
+        padding: 10px 20px;
+        background-color: #435d76;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #libro {
+        position: absolute;
+        top: 10%;
+        width: 200px;
+        height: auto;
+        margin-left: 800px !important;
+    }
+
+    #casas {
+        position: absolute;
+        bottom: -60px;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin-top: 230px;
+        margin-left: 200px;
+    }
+}
+@media (min-width: 820px) and (max-width: 1280px) {
+    #libro {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        transform: translateY(-50%);
+        width: 300px;
+        text-align: center;
+        margin-right:170px;
+    }
+    #texto {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        max-width: 400px;
+        text-align: center;
+        color: #333;
+        line-height: 1.6;
+    }
+    #casas {
+        position: absolute;
+        bottom: -60px;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin-top: 230px;
+        margin-right: 100px !important;
+    }
+}
+@media (min-width: 912px) and (max-width: 1368px) {
+    #libro {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        transform: translateY(-50%);
+        width: 500px;
+        text-align: center;
+        margin-right: 220px;
+    }
+    #texto {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        max-width: 400px;
+        text-align: center;
+        color: #333;
+        line-height: 1.6;
+    }
+}
+           /* Estilo para dispositivos grandes como iPads horizontales o Surface Pro */
+           @media (min-width: 1025px) and (max-width: 1366px) {
+    #libro {
+        position: absolute!important;
+        top: 0;
+        right: 800px !important; /* Mueve el libro hacia la derecha */
+        width: 100%!important; /* Ajusta el tamaño del libro */
+        max-width: 300px!important;
+    }
+
+    #texto {
+        max-width: 60%; /* Ajustar el ancho del texto */
+        margin: 20px auto; /* Centrar el texto */
+        text-align: justify; /* Justificar el texto */
+        font-size: 18px; /* Tamaño más grande */
+    }
+
+    .boton-compra {
+        width: 50%; /* Ajustar el tamaño del botón */
+        max-width: 350px;
+        margin: 20px auto; /* Centrar el botón */
+    }
+
+    #casas {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        margin-top: 120px;
+        margin-right: 200px;
+    }
+}
+@media (min-width: 540px) and (max-width: 720px) {
+    #casas {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+        margin-top: 200px;
+        margin-left: 500px;
+        text-align: center;
+    } 
+}  
+/* Estilo para dispositivos ultra grandes como laptops pequeñas */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    #libro {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30%; /* Ajustar el tamaño del libro */
+        max-width: 350px;
+        margin: 40px auto; /* Espaciado adicional */
+    }
+
+    #texto {
+        max-width: 50%; /* Ajustar el ancho del texto */
+        margin: 30px auto; /* Centrar el texto */
+        text-align: justify; /* Justificar el texto */
+        font-size: 20px; /* Tamaño más grande */
+    }
+
+    .boton-compra {
+        width: 40%; /* Ajustar el tamaño del botón */
+        max-width: 400px;
+        margin: 30px auto; /* Centrar el botón */
+    }
+    #casas {
+                width: 90%;
+                max-width: 400px;
+                margin: 20px auto;
+                margin-top: 120px;
+            }
+}
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+            <li><a href="parque-zoe.html">El Cuaderno Mágico de Zoe</a></li>
+            <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
+            <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <img src="images/olivar.png" alt="Olivar" id="olivar">
+        <img src="images/libromilagroso.png" alt="La Aldea Milagrosa" id="libro">
+
+        <div id="texto">
+            ¿Cuánto daría una aldea rural por sobrevivir al éxodo de sus habitantes? La Aldea Milagrosa plasma con humor y picardía el ingenio de los aldeanos en su intento de resolver este problema y atraer a turistas y nuevos pobladores mediante la invención de historias milagrosas.
+            <a href="https://www.amazon.com/-/es/B%C3%A1rbara-N-Gim%C3%A9nez-ebook/dp/B0D4JBY2TG" 
+               class="boton-compra" target="_blank">Comprar</a>
+        </div>
+
+        <img src="images/casas.png" alt="Casas" id="casas">
+    </div>
+
+    <footer>
+        <p>© Website de Bárbara N. Giménez.</p>
+        <p>Contacto: info@scribeme.net</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Basilea - Suiza 2024</p>
+    </footer>
+</body>
+</html>
