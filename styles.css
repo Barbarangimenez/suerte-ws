@@ -83,36 +83,24 @@ html, body {
 }
 
 .btn-buy, .btn-play {
-    display: flex;
-    align-items: center; /* Alinea el texto en el centro verticalmente */
-    justify-content: center; /* Alinea el texto en el centro horizontalmente */
-    padding: 15px 30px;
-    text-decoration: none;
+    padding: 12px 25px;
+    border: none;
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
     color: white;
     cursor: pointer;
-    min-width: 220px; /* Asegura un ancho mínimo uniforme */
-    height: 50px; /* Mantiene una altura uniforme */
+    text-decoration: none;
+    width: 180px; /* Anchura consistente */
     text-align: center;
 }
 
-/* Estilos específicos para cada botón */
-.btn-buy-google {
+.btn-buy {
     background-color: #177277;
 }
 
-.btn-buy-google:hover {
+.btn-buy:hover {
     background-color: #145e60;
-}
-
-.btn-buy-amazon {
-    background-color: #FF9900;
-}
-
-.btn-buy-amazon:hover {
-    background-color: #e68a00;
 }
 
 .btn-play {
