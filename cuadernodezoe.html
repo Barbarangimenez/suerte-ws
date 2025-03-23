@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <title>El Cuaderno de Zoe</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: linear-gradient(90deg, #FFDE59, #FF914D);
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(67, 93, 118, 1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Suez One', serif;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #FFD700;
+        }
+
+        /* Contenedor principal */
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 120px auto 50px;
+            padding: 20px;
+        }
+
+        /* Título */
+        .content h1 {
+            font-family: 'Suez One', serif;
+            font-size: 40px;
+            text-align: right;
+            flex: 1;
+        }
+
+        /* Imagen del libro alineada a la izquierda */
+        .book-image {
+            max-width: 300px;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+
+        /* Texto alineado a la derecha */
+        .text-content {
+            flex: 2;
+            text-align: right;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Botones */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .buy-button {
+            background-color: #177277;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .buy-button:hover {
+            background-color: #145e60;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: rgba(67, 93, 118, 1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        @media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .book-image {
+        margin: 0 0 20px 0;
+        max-width: 80%;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        width: 100%;
+    }
+
+    .buttons-container {
+        align-items: center;
+    }
+
+    .buy-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="literaturaadolescente.html">BNG</a></li>
+            <li><a href="cuadernodezoe.html">El Cuaderno de Zoe</a></li>
+            <li><a href="parque-zoe.html">El Parque de Zoe</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Imagen del libro alineada a la izquierda -->
+        <img src="images/libro.png" alt="El Cuaderno Mágico de Zoe" class="book-image">
+        
+        <div>
+            <h1>El Cuaderno de Zoe</h1>
+
+            <!-- Texto alineado a la derecha -->
+            <p class="text-content">
+                "Aquí colecciono todo tipo de historias y juegos mágicos y secretos para descubrir tu destino en el amor y en la vida. 
+                La mayoría de los juegos son de conocimiento popular, algunos antiquísimos y otros creados con mi imaginación. 
+                Recuerda jugarlos siempre con un guiño de ojo, bueno... figurativamente, pues de lo contrario no podrás ver lo que estás jugando… 
+                tú me entiendes… o no, es que a veces me voy por las ramas".
+            </p>
+
+            <!-- Botones alineados a la derecha -->
+            <div class="buttons-container">
+                <a href="https://play.google.com/store/books/details?id=0upCEQAAQBAJ&rdid=book-0upCEQAAQBAJ&rdot=1&source=gbs_atb&pcampaignid=books_booksearch_atb" 
+                   class="buy-button" target="_blank">Comprar en Google Play</a>
+                <a href="https://www.amazon.es/dp/B0DWLMDPWB" 
+                   class="buy-button" target="_blank">Comprar en Amazon</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Website de Bárbara N. Giménez.</p>
+        <p>Contacto: info@scribeme.net</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Basilea - Suiza 2024</p>
+    </footer>
+</body>
+</html>

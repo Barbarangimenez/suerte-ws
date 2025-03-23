@@ -41,66 +41,33 @@
         footer p {
             margin: 5px 0;
         }
-        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: linear-gradient(90deg, #FFDE59, #FF914D);
+            color: white;
+        }
     </style>
 </head>
 <nav class="navbar">
     <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
-        <li><a href="parque-zoe.html">El Cuaderno Mágico de Zoe</a></li>
-        <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
-        <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+        <li><a href="literaturaadolescente.html">BNG</a></li>
+        <li><a href="parque-zoe.html">El Parque de Zoe</a></li>
+        <li><a href="cuadernodezoe.html">El Cuaderno de Zoe</a></li>
     </ul>
 </nav>
 
-<!-- Primera sección -->
-<section id="cuaderno" class="main-section" style="padding: 80px; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 40px;">
-    <!-- Imagen del título -->
-    <div style="flex: 1 1 100%; text-align: center;">    
-        <div style="flex: 1 1 100%; text-align: center;">
-        <img src="images/title.png" alt="El Parque de Zoe" class="title-image" style="max-width: 500px; margin-bottom: 20px;">
-        <img src="images/micuaderno.png" alt="Mi Cuaderno" class="mi-cuaderno-title" style="max-width: 400px; margin-top: 10px;">
-        <img src="images/mariposa.png" alt="Mariposa" class="mariposa">
-    </div>
-
-    <!-- Contenedor del libro y el texto -->
-    <div class="book-section" style="display: flex; flex: 1 1 100%; gap: 40px; align-items: flex-start; justify-content: center;">
-        <!-- Imagen del libro -->
-        <img src="images/libro.png" alt="Libro" class="book-image" style="max-width: 250px; flex-shrink: 0; margin-top: 50px;">
-
-        <!-- Texto descriptivo -->
-        <div class="text-content" style="max-width: 500px; text-align: justify; font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #333; position: relative;">
-            <p>¿Alguna vez has querido descubrir tu futuro, saber si tu crush es el indicado o simplemente divertirte con juegos llenos de magia y risas?</p>
-            <p>Acompaña a Zoe en un viaje lleno de aventuras interactivas, donde los juegos de amor, los secretos mágicos y las historias personales se mezclan para crear una experiencia única. Desde predicciones sobre tu destino hasta trucos y desafíos que pondrán a prueba tu ingenio, este cuaderno es más que un libro: es una puerta a un mundo de diversión y descubrimientos.</p>
-        </div>
-              
-            <img src="images/Zoe.gif" alt="Zoe" class="zoe-image">
-            <div class="buttons-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: -5px;">
-                <a href="https://play.google.com/store/books/details?id=0upCEQAAQBAJ&rdid=book-0upCEQAAQBAJ&rdot=1&source=gbs_atb&pcampaignid=books_booksearch_atb" 
-                   class="btn-buy" 
-                   style="padding: 12px 25px; background-color: #177277; color: white; text-decoration: none; border-radius: 25px; font-size: 16px;">
-                   Comprar en Google Play
-                </a>
-                <a href="https://www.amazon.es/dp/B0DWLMDPWB" 
-                   class="btn-buy" 
-                   style="padding: 12px 25px; background-color: #E7544B; color: white; text-decoration: none; border-radius: 25px; font-size: 16px;">
-                   Comprar en Amazon
-                </a>
-                <a href="#juegos" class="btn-play" 
-                   style="padding: 12px 25px; background-color: #9aa6a5; color: white; text-decoration: none; border-radius: 25px; font-size: 16px;">
-                   Jugar
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Segunda sección (Juegos) -->
     <section id="juegos" class="juegos-section">
-        <!-- Imagen de la flor -->
-        <img src="images/flor.png" alt="Flor" class="flor-image">
-        
-        <img src="images/juegosdelparque.png" alt="Juegos del Parque" class="titulo-juegos">
+
+       <!-- Fuente Suez One desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+<h1 style="font-family: 'Suez One', serif; color: white; text-align: center; font-size: 48px; margin-top: 60px;">
+  Juegos del Parque
+</h1>
+
+
         <div class="grid-container">
             <!-- Botones conectados con JavaScript -->
             <div class="grid-item">
@@ -120,8 +87,7 @@
                 <button class="game-button" onclick="showGame('specialDateGame')">Fecha Especial</button>
             </div>
         </div>
-        <!-- Imagen del gato -->
-        <img src="images/gato.png" alt="Gato" class="gato-image">
+
     </section>
     
     
@@ -183,4 +149,5 @@
     <!-- Script cargado después del HTML -->
     <script src="script.js"></script>
 </body>
+
 </html>

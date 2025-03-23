@@ -421,3 +421,18 @@ html, body {
 .footer p {
     margin: 5px 0; /* Espaciado entre párrafos */
 }
+.titulo-juegos {
+    font-family: 'Suez One', serif;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    margin-top: 60px;
+}
+
+/* Versión para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .titulo-juegos {
+        margin-top: 100px;
+        font-size: 36px;
+    }
+}

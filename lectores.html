@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mis lectores - Bárbara N. Giménez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset general */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Contenedor principal dividido en dos */
+        .split-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Lados izquierdo y derecho */
+        .split {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Colores de fondo */
+        .left {
+            background-color: #0e4149;
+            color: white;
+        }
+
+        .right {
+            background-color: #ffca30;
+            color: white;
+        }
+
+        /* Imágenes principales (AUMENTADAS) */
+        .split img {
+            max-width: 90%; /* Antes era 80%, ahora más grande */
+            height: auto;
+        }
+
+        /* Texto en Suez One (AUMENTADO) */
+        .split h2 {
+            font-family: 'Suez One', serif;
+            font-size: 42px; /* Antes era 36px, ahora más grande */
+            margin-top: 30px;
+        }
+
+        /* Enlaces */
+        .split a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .split a:hover {
+            color: #FFD700; /* Efecto al pasar el mouse */
+        }
+
+        /* Posición especial del texto en la derecha */
+        .top-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 42px; /* Aumentado */
+            font-family: 'Suez One', serif;
+        }
+        .top-text a {
+    color: #0e4149 !important;
+}
+.top-text a:hover {
+    color: #FFD700; /* Efecto al pasar el mouse */
+}
+
+        /* Estilo para el botón de volver */
+        .volver {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px; /* Antes 100px, ahora más grande */
+            height: auto;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón de volver a la página inicial -->
+    <a href="index.html">
+        <img src="./images/volver.png" alt="Volver" class="volver">
+    </a>
+
+    <!-- Contenedor dividido -->
+    <div class="split-container">
+        <!-- Lado Izquierdo: Lectores adultos -->
+        <div class="split left">
+            <img src="images/adultos.png" alt="Lectores adultos">
+            <h2><a href="adultos.html">Para todas las edades...</a></h2>
+        </div>
+
+        <!-- Lado Derecho: Lectores adolescentes -->
+        <div class="split right">
+            <h2 class="top-text"><a href="literaturaadolescente.html">y para los más jóvenes.</a></h2>
+            <img src="images/adolescentes.png" alt="Lectores adolescentes">
+        </div>
+    </div>
+
+</body>
+</html>

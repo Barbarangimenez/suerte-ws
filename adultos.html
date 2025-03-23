@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para lectores adultos - Bárbara N. Giménez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Favicons -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
+    
+        <!-- Webmanifest -->
+        <link rel="manifest" href="images/site.webmanifest">
+        <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11539197198"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-11539197198');
+    </script>
+</head>
+    <style>
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background-color: #0e4149;
+        color: white;
+    }
+
+    footer {
+        background-color: rgba(67, 93, 118, 1);
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 50px;
+        font-size: 14px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.5;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    /* Barra de navegación */
+    .navbar {
+        background-color: rgba(67, 93, 118, 1);
+        padding: 15px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+        color: #FFD700;
+    }
+
+    /* Título */
+    .title-start {
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    .title-start img {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+        visibility: visible;
+    }
+
+    /* Imagen de la escritora */
+    .escritora-section {
+        text-align: center;
+        margin: 80px auto; /* Incrementamos ligeramente el margen para bajar la sección */
+        position: relative;
+    }
+
+    .escritora-section img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 6px 10px rgba(241, 238, 238, 0.2);
+    }
+
+    /* Flecha para la sección de la escritora */
+    .flecha-gif {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+        z-index: 10;
+        display: block;
+    }
+
+    /* Sobre la autora */
+    .author-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        margin: 100px auto;
+        max-width: 80%;
+    }
+
+    .author-photo {
+        max-width: 250px;
+        border-radius: 50%;
+    }
+
+    .author-description {
+        font-size: 18px;
+        line-height: 1.6;
+        font-family: 'Playfair Display', serif; 
+        max-width: 600px;
+        text-align: justify;
+    }
+
+    .author-title {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 20px;
+    }
+
+    /* Responsivo */
+       @media (max-width: 768px) {
+        .title-start {
+            margin-top: 200px !important; /* Forzar un gran margen superior */
+        }
+
+
+        .title-start img {
+            max-width: 90%;
+        }
+
+        .escritora-section {
+            margin-top: 20px;
+        }
+
+        .escritora-section img {
+            max-width: 90%;
+        }
+
+        .flecha-gif {
+            display: none; /* Ocultar flecha en móviles */
+        }
+
+        .author-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .author-photo {
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .author-title {
+            font-size: 22px;
+        }
+
+        .author-description {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .title-start {
+            margin-top: 90px; /* Asegurar espacio debajo de la barra */
+        }
+
+        .title-start img {
+            max-width: 95%;
+        }
+
+        .escritora-section {
+            margin-top: 30px; /* Espacio adicional para móviles pequeños */
+        }
+
+        .author-title {
+            font-size: 20px;
+        }
+
+        .author-description {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+    }
+    html, body {
+        overflow-x: hidden;
+    }
+        /* Slideshow */
+    .slideshow-image {
+        width: 260px; /* Establece un ancho fijo */
+        height: 370px; /* Establece una altura fija */
+        object-fit: cover; /* Asegura que la imagen rellene el espacio manteniendo proporciones */
+        border-radius: 10px; /* Opcional: bordes redondeados para estética */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: añade un sombreado */
+    }
+
+    .slideshow-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px; /* Espaciado uniforme entre los elementos */
+    }
+        .slideshow-container {
+            position: relative;
+            margin: 50px auto;
+            max-width: 80%;
+            padding: 10px;
+            background: #f4efde;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-text {
+            width: 60%;
+            line-height: 1.8;
+            color: #333333;
+        }
+
+        .slideshow-text h2 {
+            font-size: 30px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .slideshow-buttons {
+            margin-top: 20px;
+        }
+
+        .slideshow-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .btn-buy {
+            background-color: #177277;
+        }
+
+        .btn-buy:hover {
+            background-color: #145e60;
+        }
+
+        .btn-more {
+            background-color: #9aa6a5;
+        }
+
+        .btn-more:hover {
+            background-color: #8a9493;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .slideshow-container {
+                flex-direction: column; /* Cambiar a diseño vertical en pantallas pequeñas */
+                padding: 20px;
+            }
+
+            .slideshow-image {
+                width: 80%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+
+            .slideshow-text {
+                width: 100%;
+                text-align: center;
+            }
+
+            .slideshow-text h2 {
+                font-size: 24px; /* Reducir tamaño del título */
+            }
+
+            .slideshow-buttons a {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slideshow-text h2 {
+                font-size: 20px; /* Títulos más pequeños */
+            }
+
+            .slideshow-buttons a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+        @media (max-width: 768px) {
+        .navbar ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar a {
+            font-size: 14px;
+        }
+
+        .title-start img {
+            max-width: 90%; /* Hacer el título más pequeño en pantallas pequeñas */
+        }
+
+        .author-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin: 20px auto; /* <- Reduje el margen superior */
+    max-width: 80%;
+}
+
+        .author-photo {
+            max-width: 80%; /* Imagen más grande en móviles */
+            margin-bottom: 20px;
+        }
+
+        .author-title {
+            font-size: 22px; /* Reducir el tamaño del título */
+        }
+
+        .author-description {
+            font-size: 16px; /* Reducir tamaño del texto */
+            line-height: 1.4;
+        }
+
+        .slideshow-container {
+            flex-direction: column; /* Cambiar a diseño vertical en pantallas pequeñas */
+            padding: 20px;
+        }
+
+        .slideshow-image {
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+        }
+
+        .slideshow-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .slideshow-text h2 {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar a {
+            font-size: 12px;
+        }
+
+        .title-start img {
+            max-width: 100%;
+        }
+
+        .author-title {
+            font-size: 20px; /* Título más pequeño */
+        }
+
+        .author-description {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .slideshow-text h2 {
+            font-size: 20px;
+        }
+    }
+
+        html, body {
+            overflow-x: hidden; /* Prevenir overflow horizontal */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="adultos.html">BNG</a></li>
+            <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+            <li><a href="scribeme.html">Proyecto Scríbeme</a></li>
+            <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título -->
+    <div class="title-start">
+        <img src="images/blanco.png" alt="Título Start">
+    </div>
+
+    <!-- Imagen circular de la escritora -->
+    <div class="escritora-section">
+        <img src="images/escritora.png" alt="Imagen de la Escritora">
+        <a href="#sobre-la-autora" class="flecha-gif-link">
+            <img src="images/flechablanca.gif" alt="Ir a Sobre la Autora" class="flecha-gif">
+        </a>
+    </div>
+    
+    <section id="sobre-la-autora" class="author-section">
+        <img src="images/biblioteca.png" alt="Foto de la autora" class="author-photo">
+        <div>
+            <h2 class="author-title">Sobre la Autora</h2>
+            <p class="author-description">
+                Bárbara N. Giménez es una escritora argentino-suiza nacida en Buenos Aires en 1983 y criada en Paraguay. Estudió Ciencias de la Comunicación en Paraguay y, tras trabajar en medios, se trasladó a Suiza en 2007, donde se formó en Filología Hispánica y Sociología en la Universidad de Basilea. Publicó su primer cuento en 2000 y, desde entonces, ha compartido su obra en blogs y plataformas digitales.
+
+                En 2023 lanzó el libro juvenil El Cuaderno de Zoe bajo el seudónimo Sophie Russo. En 2024 publicó su segunda edición esta vez bajo su nombre real. Ese mismo año también publicó la obra de microteatro La Aldea Milagrosa en Amazon KDP y ganó el VI Concurso de Relatos Cortos «La Ilustre Fregona» con su cuento Por la boca muere el pez.
+                
+                Bárbara explora en su obra los límites entre lo cotidiano, lo fantástico y lo absurdo, creando mundos donde lo insólito y lo místico revelan la esencia de lo humano.
+            </p>
+        </div>
+    </section>
+
+    <!-- Slideshow -->
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <div class="slideshow-text">
+                <h2>El Mordisco de la Polilla</h2>
+                <p>
+                    "He sabido por lenguas impertinentes que existe un poeta de incon-
+                    mensurable y extraordinaria inspiración, cuyos poemas reflejan la armonía
+                    absoluta de las letras en su máxima expresión. Sin embargo, no es otra cosa      
+                    que un farsante. Grandes críticos del canon lo han nombrado, con unani-
+                    midad mítica, sublime embajador de todo excelso escrito; sin embargo, su        
+                    talento se cimienta en la eminente representación del engaño.".
+                </p>
+                <div class="slideshow-buttons">
+                    <a href="https://www.atlanticbooks.es/es/el-mordisco-de-la-polilla-y-otros-relatos-entre-lo-fantasatico-y-lo-absurdo" 
+                       class="btn-buy">Comprar</a>
+                    <a href="mordisco.html" class="btn-more">Saber Más</a>
+                </div>
+            </div>
+            <img src="images/mordiscocover.png" alt="El Cuaderno Mágico de Zoe" class="slideshow-image">
+        </div>
+        <div class="slideshow-container">
+            <div class="slideshow-text">
+                <h2>La Aldea Milagrosa</h2>
+                <p>
+                    <strong>JOSÉ:</strong> "Sí, nuestras olivas son nuestro mayor encanto, te comes una y te embellece en un segundo".<br>
+                    <strong>ÁLVARO:</strong> "¿Y usted también las prueba?" - pregunta Álvaro escéptico mirando al campesino poco agraciado.<br>
+                    <strong>JOSÉ:</strong> "Pues… aún no he desayunado hoy y tampoco me he comido una, para no pecar de vanidoso, ¿sabe?"
+                </p>
+                <div class="slideshow-buttons">
+                    <a href="https://www.amazon.com/-/es/B%C3%A1rbara-N-Gim%C3%A9nez-ebook/dp/B0D4JBY2TG" target="_blank" class="btn-buy">Comprar</a>
+                    <a href="aldea-milagrosa.html" class="btn-more">Saber Más</a>
+                </div>
+            </div>
+            <img src="images/libromilagroso.png" alt="La Aldea Milagrosa" class="slideshow-image">
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© Website de Bárbara N. Giménez.</p>
+        <p>Contacto: info@scribeme.net</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Basilea - Suiza 2024</p>
+    </footer>    
+
+    <script>
+        // Lógica para slideshow automático
+        const slides = document.querySelectorAll('.slideshow-container');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'flex' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Mostrar la primera diapositiva
+        showSlide(currentSlide);
+
+        // Cambiar cada 10 segundos
+        setInterval(nextSlide, 10000);
+    </script>
+</body>
+</html>
