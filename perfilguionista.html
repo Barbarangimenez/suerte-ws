@@ -7,10 +7,10 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-    <link rel="manifest" href="images/site.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
+<link rel="manifest" href="images/site.webmanifest">
 
     <style>
         body {
@@ -67,23 +67,26 @@
             font-size: 16px;
         }
 
-        .language-options {
-            display: flex;
-            justify-content: flex-start;
-            gap: 20px;
-            margin-top: 40px;
-        }
+        .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
 
-        .language-options a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-        }
+.language-switch a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        .language-options a:hover {
-            text-decoration: underline;
-        }
+.language-switch a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
 
         a.video-link {
             color: #FFD700;
@@ -113,10 +116,11 @@
         font-size: 28px;
     }
 
-    .language-options {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    .language-switch {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+}
 
     .volver {
         width: 80px;
@@ -168,9 +172,10 @@
                 <p>✉️ gimenezbarbaran@gmail.com</p>
             </div>
 
-            <div class="language-options">
-                <a href="ingles.html">English</a>
-                <a href="aleman.html">Deutsch</a>
+            <div class="language-switch">
+                <a href="perfilguionista.html">ES</a>
+                <a href="ingles.html">EN</a>
+                <a href="aleman.html">DE</a>
             </div>
         </div>
 
