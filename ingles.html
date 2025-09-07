@@ -50,6 +50,20 @@
             margin-bottom: 20px;
         }
 
+        h2 {
+            margin-top: 40px;
+        }
+
+        .film-block {
+            margin-bottom: 30px;
+        }
+
+        .film-block img {
+            max-width: 250px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
         .image-content {
             width: 35%;
             text-align: right;
@@ -68,25 +82,25 @@
         }
 
         .language-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    gap: 15px;
-}
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+        }
 
-.language-switch a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .language-switch a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-.language-switch a:hover {
-    text-decoration: underline;
-    color: #FFD700;
-}
+        .language-switch a:hover {
+            text-decoration: underline;
+            color: #FFD700;
+        }
 
         a.video-link {
             color: #FFD700;
@@ -96,44 +110,43 @@
         a.video-link:hover {
             text-decoration: underline;
         }
+
         @media screen and (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
+            body {
+                padding: 20px;
+            }
 
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .text-content,
-    .image-content {
-        width: 100%;
-        text-align: center;
-    }
+            .text-content,
+            .image-content {
+                width: 100%;
+                text-align: center;
+            }
 
-    h1 {
-        font-size: 28px;
-    }
+            h1 {
+                font-size: 28px;
+            }
 
-    .language-switch {
-    top: 10px;
-    right: 10px;
-    font-size: 14px;
-}
+            .language-switch {
+                top: 10px;
+                right: 10px;
+                font-size: 14px;
+            }
 
+            .volver {
+                width: 80px;
+                top: 10px;
+                left: 10px;
+            }
 
-    .volver {
-        width: 80px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .contact {
-        font-size: 14px;
-    }
-}
-
+            .contact {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -147,22 +160,47 @@
             <h1>Bárbara N. Giménez - Screenwriter</h1>
 
             <p>
-                I am a journalist, sociologist, and philologist by training, with a career that spans from journalistic screenwriting to fiction. I’ve worked in television as a writer and producer for programs across a range of genres. In recent years, I’ve focused on literary writing, creating worlds and stories through novels, plays, and short fiction. Currently, I’m enrolled in the Expert Screenwriting Program at MasterD, specializing in film, television, advertising, video games, and podcasts.
+                I am a journalist, sociologist, and philologist by training, with a career that spans from journalistic screenwriting to fiction. 
+                I’ve worked in television as a writer and producer for programs across a range of genres. 
+                In recent years, I’ve focused on literary writing, creating worlds and stories through novels, plays, and short fiction. 
+                Currently, I’m enrolled in the Expert Screenwriting Program at MasterD, specializing in film, television, advertising, video games, and podcasts.
             </p>
 
             <h2>Experience</h2>
 
             <p><strong>Producer and Writer (2005–2007)</strong></p>
-            <p>Content production and writing for various television programs, including comedy, music, children’s and magazine formats.</p>
+            <p>Content production and writing for various television programs, including comedy, music, children’s, and magazine formats.</p>
             <p><i>Telefuturo - Asunción, Paraguay</i></p>
 
             <p><strong>Short Film "Zurücklos" (2010)</strong></p>
 
             <p><strong>Documentary <i>"Mujeres Gloriosas"</i> (2015)</strong><br>
-                <a href="https://youtu.be/ObcG_N1U4H0" class="video-link" target="_blank">▶ Watch</a></p>                
+                <a href="https://youtu.be/ObcG_N1U4H0" class="video-link" target="_blank">▶ Watch</a>
+            </p>                
 
-            <p><strong>Short Film <i>"La Oscuridad"</i> (2025)</strong><br>
-            <a href="https://youtu.be/lWEux2xaZDU" class="video-link" target="_blank">▶ Watch</a></p>
+            <div class="film-block">
+                <p><strong>Short Film <i>"La Oscuridad"</i> (2025)</strong></p>
+                <img src="images/laoscuridad.png" alt="La Oscuridad">
+                <br>
+                <a href="https://youtu.be/lWEux2xaZDU" class="video-link" target="_blank">▶ Watch</a>
+            </div>
+
+            <div class="film-block">
+                <p><strong>Short Film <i>"Querido Luis"</i> (2025)</strong></p>
+                <img src="images/queridoluis.png" alt="Querido Luis">
+                <p><i>Official Selection – Sweden Film Awards 2025</i></p>
+            </div>
+
+            <div class="film-block">
+                <p><strong>Screenplay <i>"Hidden Treasure"</i> (2025)</strong></p>
+                <img src="images/hiddentreasure.png" alt="Hidden Treasure">
+                <ul>
+                    <li><i>Semi-Finalist – Wiki Screenplay Contest, United States (June 18, 2025)</i></li>
+                    <li><i>Official Selection – Tokyo Film and Screenplay Awards, Japan (August 14, 2025)</i></li>
+                    <li><i>Official Selection – Los Angeles Film and Documentary Awards, United States (August 18, 2025)</i></li>
+                    <li><i>Official Selection – Hollywood Stage Script Film Competition, United States (August 15, 2025)</i></li>
+                </ul>
+            </div>
 
             <div class="contact">
                 <p><strong>Contact:</strong></p>
