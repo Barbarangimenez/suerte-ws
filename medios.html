@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medios & Publicaciones – Bárbara N. Giménez</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11539197198"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11539197198');
+  </script>
+
+  <style>
+    :root{
+      --bg:#0E4147;        /* verde petróleo oscuro */
+      --fg:#ffffff;        /* SIEMPRE blanco para el texto */
+      --card: rgba(20,20,20,0.9);
+      --stroke:#237A73;    /* verde medio para bordes */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: 'Suez One', serif;
+      color: var(--fg);
+      background-color: var(--bg);
+      padding-top: 70px; /* espacio para la navbar fija */
+    }
+    a{
+      color: var(--fg);            /* enlaces en blanco */
+      text-decoration: none;
+    }
+    a:hover{ text-decoration: underline; opacity: .9; }
+
+    .meta {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: normal;  /* ← quita el bold */
+}
+
+.list li,
+.meta {
+  font-family: Arial, sans-serif;  /* o Playfair Display, si prefieres */
+  font-weight: normal;
+}
+
+
+
+    /* Barra de navegación */
+    .navbar {
+      background-color: rgba(67, 93, 118, 1);
+      padding: 15px 0;
+      position: fixed; top: 0; width: 100%;
+      z-index: 1000;
+    }
+    .navbar ul{
+      list-style:none;margin:0;padding:0;
+      display:flex;justify-content:center;gap:30px;
+    }
+    .navbar a{
+      font-family:'Playfair Display', serif;
+      font-size:15px; font-weight:500; letter-spacing:1px;
+      color:#fff;
+    }
+    .navbar a:hover{ text-decoration: underline; }
+
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:24px; margin-bottom:28px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:16px;
+    }
+    .hero h1{margin:0 0 8px; font-size:36px; color:var(--fg)}
+    .hero p{margin:0; opacity:.85}
+    .hero-right{
+      display:flex; gap:10px; justify-content:flex-end; align-items:center; flex-wrap:wrap
+    }
+    .hero-right img{height:70px;width:auto;border-radius:10px;border:1px solid var(--stroke)}
+
+    h2{margin:34px 0 14px; font-size:24px; color:var(--fg)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--stroke);
+      border-radius:14px;
+      padding:14px;
+      display:flex; flex-direction:column; gap:10px;
+      min-height:160px;
+    }
+    .media-logo{
+      width:100%; height:140px; object-fit:contain;
+      background:#0f0f0f; border:1px solid var(--stroke);
+      border-radius:10px; padding:10px;
+    }
+    .card h3{margin:0; font-size:18px; line-height:1.25; color:var(--fg)}
+    .meta{opacity:.8; font-size:13px}
+
+    .list{
+      background: var(--card);
+      border:1px solid var(--stroke);
+      border-radius:14px;
+      padding:16px 18px;
+    }
+    .list ul{margin:0; padding-left:18px}
+    .list li{margin:8px 0}
+
+    .section{margin:34px 0}
+
+    /* Pie de página */
+    footer{
+      background-color: rgba(67, 93, 118, 1);
+      color:#fff; text-align:center;
+      padding:30px 20px; font-size:14px; line-height:1.5;
+    }
+    footer p{margin:5px 0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .hero-right{justify-content:flex-start}
+      .grid{grid-template-columns: repeat(2, 1fr)}
+    }
+    @media (max-width:640px){
+      .grid{grid-template-columns: 1fr}
+      .hero h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Paratodaslasedades.html">BNG</a></li>
+      <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
+      <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Cabecera Medios">
+      <div>
+        <h1>Medios & Publicaciones</h1>
+        <p>Selección de artículos sobre la autora, entrevistas y publicaciones firmadas por Bárbara N. Giménez.</p>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img src="images/elescritorlogo.png" alt="El Escritor logo">
+        <img src="images/lavanguardialogo.png" alt="La Vanguardia logo">
+        <img src="images/letralialogo.png" alt="Letralia logo">
+        <img src="images/rtvelogo.png" alt="RTVE logo">
+      </div>
+    </section>
+
+    <!-- 1) ANTLOGÍAS 2025 -->
+    <section class="section" aria-label="Antologías 2025">
+      <h2>Antologías 2025</h2>
+      <div class="list">
+        <ul>
+          <li><strong>Próximamente:</strong> <i>Mundo Paranormal</i> — cuento <i>El armario del quinto piso</i></li>
+          <li><strong>Microfantasías</strong> (marzo 2025) · Ed. Diversidad Literaria</li>
+          <li><strong>Camino sin ti</strong> (junio 2025) · Ed. Mundo Escritura</li>
+          <li><strong>Maravilla</strong> (junio 2025) · Ed. Creatividad Literaria</li>
+          <li><strong>Tu caricia en mi piel</strong> (marzo 2025) · Ed. Creatividad Literaria</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2) PUBLICACIONES PROPIAS -->
+    <section class="section" aria-label="Publicaciones de la autora">
+      <h2>Publicaciones propias</h2>
+      <div class="grid">
+        <!-- La Vanguardia -->
+        <article class="card">
+          <img class="media-logo" src="images/lavanguardialogo.png" alt="La Vanguardia">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.lavanguardia.com/participacion/red-lectores/20250528/10723735/convierte-espectaculo.html">
+            “Convierte en espectáculo” (La Vanguardia) →
+          </a></h3>
+          <p class="meta">Red de Lectores · 28/05/2025</p>
+        </article>
+
+        <!-- Letralia -->
+        <article class="card">
+          <img class="media-logo" src="images/letralialogo.png" alt="Letralia">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://letralia.com/articulos-y-reportajes/2025/07/08/borges-calvino-maquina-de-los-relatos/">
+            “Borges, Calvino y la máquina de los relatos” (Letralia) →
+          </a></h3>
+          <p class="meta">Artículos y reportajes · 08/07/2025</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3) ARTÍCULOS Y ENTREVISTAS (sobre mí) -->
+    <section class="section" aria-label="Artículos y entrevistas sobre la autora">
+      <h2>Artículos y entrevistas</h2>
+      <div class="grid">
+        <!-- El Escritor – noticia -->
+        <article class="card">
+          <img class="media-logo" src="images/elescritorlogo.png" alt="El Escritor">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://elescritor.es/noticias/un-pez-filosofo-en-roma-un-vestido-que-viaja-en-el-tiempo-y-angeles-con-crisis-existenciales-el-libro-mas-delirante-y-brillante-del-ano-ya-esta-aqui/">
+            Un pez filósofo en Roma… (El Escritor) →
+          </a></h3>
+          <p class="meta">Noticias · El Escritor</p>
+        </article>
+
+        <!-- El Escritor – entrevista -->
+        <article class="card">
+          <img class="media-logo" src="images/elescritorlogo.png" alt="El Escritor">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://elescritor.es/entrevista/barbara-rompe-el-silencio-la-escritora-que-vencio-la-depresion-creando-mundos-de-fantasia-y-vuelve-con-historias-que-conmueven/">
+            Entrevista: “Bárbara rompe el silencio” (El Escritor) →
+          </a></h3>
+          <p class="meta">Entrevistas · El Escritor</p>
+        </article>
+
+        <!-- Culturaliteraria -->
+        <article class="card">
+          <img class="media-logo" src="images/culturaliterarialogo.png" alt="Cultura Literaria">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.culturaliteraria.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (Cultura Literaria) →
+          </a></h3>
+          <p class="meta">Noticias · culturaliteraria.es</p>
+        </article>
+
+        <!-- El Escritor – noticia 2 -->
+        <article class="card">
+          <img class="media-logo" src="images/elescritorlogo.png" alt="El Escritor">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://elescritor.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (El Escritor) →
+          </a></h3>
+          <p class="meta">Noticias · El Escritor</p>
+        </article>
+
+        <!-- El Influencer -->
+        <article class="card">
+          <img class="media-logo" src="images/elinfluencerlogo.png" alt="El Influencer">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.elinfluencer.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (El Influencer) →
+          </a></h3>
+          <p class="meta">Noticias · elinfluencer.es</p>
+        </article>
+
+        <!-- La Escritora -->
+        <article class="card">
+          <img class="media-logo" src="images/laescritoralogo.png" alt="La Escritora">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://laescritora.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (La Escritora) →
+          </a></h3>
+          <p class="meta">Noticias · laescritora.es</p>
+        </article>
+
+        <!-- Literatos -->
+        <article class="card">
+          <img class="media-logo" src="images/literatoslogo.png" alt="Literatos">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.literatos.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (Literatos) →
+          </a></h3>
+          <p class="meta">Noticias · literatos.es</p>
+        </article>
+
+        <!-- Qué Leer -->
+        <article class="card">
+          <img class="media-logo" src="images/queleerlogo.png" alt="Qué Leer">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://queleer.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (Qué Leer) →
+          </a></h3>
+          <p class="meta">Noticias · queleer.es</p>
+        </article>
+
+        <!-- The Writer Society -->
+        <article class="card">
+          <img class="media-logo" src="images/thewritersocietylogo.png" alt="The Writer Society">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.thewritersociety.com/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (The Writer Society) →
+          </a></h3>
+          <p class="meta">Noticias · thewritersociety.com</p>
+        </article>
+
+        <!-- Tienes que leerlo -->
+        <article class="card">
+          <img class="media-logo" src="images/tienesqueleerlogo.png" alt="Tienes que leerlo">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://tienesqueleerlo.com/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (TienesQueLeerlo) →
+          </a></h3>
+          <p class="meta">Noticias · tienesqueleerlo.com</p>
+        </article>
+
+        <!-- TodoCultura -->
+        <article class="card">
+          <img class="media-logo" src="images/todoculturalogo.png" alt="TodoCultura">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://todocultura.es/noticias/barbara-noelia-gimenez-el-mordisco-de-la-polilla/">
+            Nota: El mordisco de la polilla (TodoCultura) →
+          </a></h3>
+          <p class="meta">Noticias · todocultura.es</p>
+        </article>
+
+        <!-- Europa Press (comunicado) -->
+        <article class="card">
+          <img class="media-logo" src="images/europapresslogo.png" alt="Europa Press">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.europapress.es/comunicados/sociedad-00909/noticia-comunicado-polillas-abren-portales-teorias-conspirativas-literarias-20250423122715.html">
+            Comunicado en Europa Press →
+          </a></h3>
+          <p class="meta">Comunicados · Europa Press</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4) RADIO / PODCASTS -->
+    <section class="section" aria-label="Radio y podcasts">
+      <h2>Radio & Podcasts</h2>
+      <div class="grid">
+        <article class="card">
+          <img class="media-logo" src="images/rtvelogo.png" alt="RTVE">
+          <h3><a target="_blank" rel="noopener noreferrer" href="https://www.rtve.es/play/audios/libros-de-arena/libros-arena-juan-jose-millas-imbecil-va-escribir-novela/16590358/">
+            Libros de Arena – RTVE Play (audio) →
+          </a></h3>
+          <p class="meta">RTVE · Programa “Libros de Arena”</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Website de Bárbara N. Giménez.</p>
+    <p>Contacto: info@scribeme.net</p>
+    <p>Todos los derechos reservados.</p>
+    <p>Basilea - Suiza 2024</p>
+  </footer>
+</body>
+</html>
