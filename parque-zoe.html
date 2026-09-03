@@ -1,150 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11539197198"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-11539197198');
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Parque de Zoe — Bárbara N. Giménez</title>
+<meta name="description" content="Los juegos de El Cuaderno de Zoe: la galleta de la fortuna, el juego de compatibilidad, el oráculo de sí o no y la fecha especial.">
+<meta name="author" content="Bárbara N. Giménez">
+<link rel="canonical" href="https://www.barbarangimenez.com/parque-zoe.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="El Parque de Zoe — Bárbara N. Giménez">
+<meta property="og:description" content="Los juegos de El Cuaderno de Zoe, para jugar aquí mismo.">
+<meta property="og:url" content="https://www.barbarangimenez.com/parque-zoe.html">
+<meta property="og:image" content="https://www.barbarangimenez.com/images/libro.png">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
-    <!-- Favicons -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-    <link rel="manifest" href="images/site.webmanifest">
-    
-    <title>El Parque de Zoe</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        footer {
-            background-color: rgba(67, 93, 118, 1);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-            font-size: 14px;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.5;
-        }
+<body class="play">
 
-        footer p {
-            margin: 5px 0;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background: linear-gradient(90deg, #FFDE59, #FF914D);
-            color: white;
-        }
-    </style>
-</head>
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="literaturaadolescente.html">BNG</a></li>
-        <li><a href="parque-zoe.html">El Parque de Zoe</a></li>
-        <li><a href="cuadernodezoe.html">El Cuaderno de Zoe</a></li>
-    </ul>
-</nav>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="cuadernodezoe.html">El Cuaderno de Zoe</a>
+      <a href="parque-zoe.html" aria-current="page">El Parque de Zoe</a>
+      <a href="medios.html">Medios</a>
+      <span class="lang">
+        <a href="parque-zoe.html" aria-current="true">ES</a>
+        <a href="lectores-en.html">EN</a>
+        <a href="lectores-de.html">DE</a>
+      </span>
+    </nav>
+  </div>
+</header>
 
-    <section id="juegos" class="juegos-section">
+<main>
 
-       <!-- Fuente Suez One desde Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
-
-<h1 style="font-family: 'Suez One', serif; color: white; text-align: center; font-size: 48px; margin-top: 60px;">
-  Juegos del Parque
-</h1>
-
-
-        <div class="grid-container">
-            <!-- Botones conectados con JavaScript -->
-            <div class="grid-item">
-                <img src="images/cookie.gif" alt="Galleta de la Fortuna" class="game-image">
-                <button class="game-button" onclick="showGame('fortuneGame')">Galleta de la Fortuna</button>
-            </div>
-            <div class="grid-item" style="position: relative;">
-                <img src="images/compatibility-icon.gif" alt="Compatibilidad" class="game-image">
-                <button class="game-button" onclick="showGame('compatibilityGame')">Juego de Compatibilidad</button>
-            </div>
-            <div class="grid-item">
-                <img src="images/prediction-icon.gif" alt="Oráculo" class="game-image">
-                <button class="game-button" onclick="showGame('oracleGame')">Oráculo de Sí o No</button>
-            </div>
-            <div class="grid-item">
-                <img src="images/specialdate-icon.gif" alt="Fecha Especial" class="game-image">
-                <button class="game-button" onclick="showGame('specialDateGame')">Fecha Especial</button>
-            </div>
-        </div>
-
-    </section>
-    
-    
-
-    <!-- Juegos emergentes -->
-    <div class="game-container" id="fortuneGame">
-        <button class="close-button" onclick="closeGame()">×</button>
-        <h1>Galleta de la Fortuna</h1>
-        <img id="thinkingImage" src="images/thinking-icon.gif" alt="Pensando...">
-        <img id="predictionImage" src="" alt="Predicción">
+  <section class="hero hero--teal wrap">
+    <div class="reveal">
+      <span class="eyebrow">El Parque de Zoe</span>
+      <h1>Los juegos<br>del cuaderno.</h1>
+      <p class="lead">Las historias y los juegos que Zoe coleccionaba en su cuaderno cuadriculado, para jugar aquí mismo. Algunos son de conocimiento popular, otros antiquísimos y otros salieron de mi imaginación. Recuerda jugarlos siempre con un guiño de ojo.</p>
+      <div class="btn-row">
+        <a class="btn btn--teal" href="cuadernodezoe.html">Conoce el libro</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Compatibilidad -->
-<!-- Juego de Compatibilidad -->
-<div class="game-container" id="compatibilityGame">
-    <button class="close-button" onclick="closeGame()">×</button>
-    <h1>Juego de Compatibilidad</h1>
-    <input id="yourName" type="text" placeholder="Tu nombre">
-    <input id="crushName" type="text" placeholder="Nombre de tu crush">
-    <img id="thinkingImageCompatibility" src="images/thinking-icon.gif" alt="Pensando..." style="display: none;">
-    <button id="calculateCompatibility" class="game-button">Calcular</button>
-    <p id="compatibilityResult"></p>
+  <section class="section wrap" id="juegos">
+    <span class="eyebrow reveal">Cuatro juegos</span>
+    <h2 class="reveal">Elige tu suerte</h2>
+
+    <div class="games reveal">
+
+      <button class="game-card" type="button" data-game="fortune">
+        <span class="game-icon"><img src="images/cookie.gif" alt="" loading="lazy"></span>
+        <span class="game-name">Galleta de la Fortuna</span>
+        <span class="game-desc">Rompe la galleta y lee lo que tiene que decirte.</span>
+        <span class="game-go">Jugar &rarr;</span>
+      </button>
+
+      <button class="game-card" type="button" data-game="compat">
+        <span class="game-icon"><img src="images/compatibility-icon.gif" alt="" loading="lazy"></span>
+        <span class="game-name">Juego de Compatibilidad</span>
+        <span class="game-desc">Dos nombres, un porcentaje. Nada más y nada menos.</span>
+        <span class="game-go">Jugar &rarr;</span>
+      </button>
+
+      <button class="game-card" type="button" data-game="oracle">
+        <span class="game-icon"><img src="images/prediction-icon.gif" alt="" loading="lazy"></span>
+        <span class="game-name">Oráculo de Sí o No</span>
+        <span class="game-desc">Piensa tu pregunta con los ojos cerrados y pulsa.</span>
+        <span class="game-go">Jugar &rarr;</span>
+      </button>
+
+      <button class="game-card" type="button" data-game="date">
+        <span class="game-icon"><img src="images/specialdate-icon.gif" alt="" loading="lazy"></span>
+        <span class="game-name">Fecha Especial</span>
+        <span class="game-desc">El día que algo bueno va a pasarte, y qué será.</span>
+        <span class="game-go">Jugar &rarr;</span>
+      </button>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ventana de juego -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" data-close aria-label="Cerrar">&times;</button>
+    <h3 class="modal-title" id="modal-title"></h3>
+
+    <div class="modal-body">
+
+      <!-- galleta -->
+      <div class="game" data-panel="fortune" hidden>
+        <div class="stage">
+          <img class="thinking" src="images/thinking-icon.gif" alt="Pensando…" hidden>
+          <img class="result-img" alt="Tu galleta de la fortuna" hidden>
+        </div>
+        <button class="btn btn--teal play" type="button">Romper la galleta</button>
+      </div>
+
+      <!-- compatibilidad -->
+      <div class="game" data-panel="compat" hidden>
+        <div class="fields">
+          <label>Tu nombre
+            <input type="text" id="yourName" autocomplete="off" spellcheck="false" placeholder="Zoe">
+          </label>
+          <label>Su nombre
+            <input type="text" id="crushName" autocomplete="off" spellcheck="false" placeholder="Alguien">
+          </label>
+        </div>
+        <div class="stage stage--sm">
+          <img class="thinking" src="images/thinking-icon.gif" alt="Calculando…" hidden>
+          <p class="result-text" role="status" aria-live="polite"></p>
+        </div>
+        <button class="btn btn--teal play" type="button">Calcular</button>
+      </div>
+
+      <!-- oráculo -->
+      <div class="game" data-panel="oracle" hidden>
+        <p class="game-hint">Piensa una pregunta de sí o no. Cuando la tengas clara, pulsa.</p>
+        <div class="stage">
+          <img class="thinking" src="images/thinking-icon.gif" alt="Consultando…" hidden>
+          <img class="result-img" alt="La respuesta del oráculo" hidden>
+        </div>
+        <button class="btn btn--teal play" type="button">Consultar al oráculo</button>
+      </div>
+
+      <!-- fecha especial -->
+      <div class="game" data-panel="date" hidden>
+        <div class="stage stage--sm">
+          <img class="thinking" src="images/thinking-icon.gif" alt="Buscando…" hidden>
+          <div class="date-result" role="status" aria-live="polite" hidden>
+            <span class="date-day"></span>
+            <span class="date-event"></span>
+          </div>
+        </div>
+        <button class="btn btn--teal play" type="button">Descubrir mi fecha</button>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<!-- Fecha Especial -->
-<div class="game-container" id="specialDateGame">
-    <button class="close-button" onclick="closeGame()">×</button>
-    <h1>Fecha Especial</h1>
-    <img id="thinkingImageSpecialDate" src="images/thinking-icon.gif" alt="Pensando..." style="display: none;">
-    <button id="discoverDateButton" class="game-button">Descubrir</button>
-    <div id="specialDateResult" style="display: none;">
-        <h3>Fecha: <span id="specialDate"></span></h3>
-        <h3>Evento: <span id="eventType"></span></h3>
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+      <p class="foot-legal">© 2026 Bárbara N. Giménez<br>Todos los derechos reservados</p>
     </div>
-</div>
-    <div class="game-container" id="oracleGame">
-        <button class="close-button" onclick="closeGame()">×</button>
-        <h1>Oráculo de Sí o No</h1>
-        <img id="thinkingImageOracle" src="images/thinking-icon.gif" alt="Pensando...">
-        <img id="oracleAnswerImage" src="" alt="Respuesta">
+    <nav class="foot-nav">
+      <a href="index.html">Inicio</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="literaturaadolescente.html">Literatura juvenil</a>
+      <a href="medios.html">Medios</a>
+    </nav>
+    <div class="foot-nav">
+      <a href="mailto:info@scribeme.net">info@scribeme.net</a>
+      <p>Basilea, Suiza</p>
     </div>
-
-    <div class="game-container" id="specialDateGame">
-        <button class="close-button" onclick="closeGame()">×</button>
-        <h1>Fecha Especial</h1>
-        <button id="discoverDateButton" class="game-button">Descubrir</button>
-        <div id="specialDateResult">
-            <h3>Fecha: <span id="specialDate"></span></h3>
-            <h3>Evento: <span id="eventType"></span></h3>
-        </div>
-    </div>
- <!-- Pie de página -->
- <footer>
-    <p>© Website de Bárbara N. Giménez.</p>
-    <p>Contacto: info@scribeme.net</p>
-    <p>Todos los derechos reservados.</p>
-    <p>Basilea - Suiza 2024</p>
+  </div>
 </footer>
-    <!-- Script cargado después del HTML -->
-    <script src="script.js"></script>
-</body>
 
+<script src="site.js"></script>
+<script>
+/* El Parque de Zoe — juegos */
+(function () {
+  "use strict";
+
+  var TITLES = {
+    fortune: "Galleta de la Fortuna",
+    compat:  "Juego de Compatibilidad",
+    oracle:  "Oráculo de Sí o No",
+    date:    "Fecha Especial"
+  };
+
+  var EVENTS = [
+    "Un gran descubrimiento",
+    "Una sorpresa agradable",
+    "Buenas noticias",
+    "Un reencuentro especial",
+    "Una llamada inesperada",
+    "Una invitación llegará",
+    "Recibirás un obsequio",
+    "Una persona especial llega a tu vida",
+    "Se cumplirá un deseo",
+    "Tendrás éxito en tu cometido",
+    "Día de suerte",
+    "Día divertido"
+  ];
+
+  var THINK = 2000;               // los dos segundos de suspense de siempre
+  var FORTUNES = 100;             // images/1.png … images/100.png
+  var ORACLES  = 24;              // images/R1.png … images/R24.png
+
+  var modal = document.getElementById("modal");
+  var title = document.getElementById("modal-title");
+  var panels = modal.querySelectorAll(".game");
+  var lastFocus = null;
+  var timer = null;
+
+  function rnd(n) { return Math.floor(Math.random() * n) + 1; }
+
+  function resetPanel(panel) {
+    panel.querySelectorAll(".thinking").forEach(function (el) { el.hidden = true; });
+    panel.querySelectorAll(".result-img").forEach(function (el) {
+      el.hidden = true; el.removeAttribute("src"); el.classList.remove("in");
+    });
+    panel.querySelectorAll(".result-text").forEach(function (el) {
+      el.textContent = ""; el.classList.remove("in", "warn");
+    });
+    panel.querySelectorAll(".date-result").forEach(function (el) {
+      el.hidden = true; el.classList.remove("in");
+    });
+    panel.querySelectorAll("input").forEach(function (el) { el.value = ""; });
+    var btn = panel.querySelector(".play");
+    if (btn) btn.disabled = false;
+  }
+
+  function open(name) {
+    clearTimeout(timer);
+    lastFocus = document.activeElement;
+    title.textContent = TITLES[name] || "";
+    panels.forEach(function (p) {
+      var on = p.dataset.panel === name;
+      p.hidden = !on;
+      if (on) resetPanel(p);
+    });
+    modal.hidden = false;
+    document.body.classList.add("no-scroll");
+    var first = modal.querySelector("input, .play");
+    if (first) first.focus();
+  }
+
+  function close() {
+    clearTimeout(timer);
+    modal.hidden = true;
+    document.body.classList.remove("no-scroll");
+    panels.forEach(resetPanel);
+    if (lastFocus) lastFocus.focus();
+  }
+
+  /* pensar → resolver */
+  function think(panel, done) {
+    var btn = panel.querySelector(".play");
+    var spin = panel.querySelector(".thinking");
+    if (btn) btn.disabled = true;
+    if (spin) spin.hidden = false;
+    panel.querySelectorAll(".result-img, .date-result").forEach(function (el) {
+      el.hidden = true; el.classList.remove("in");
+    });
+    var txt = panel.querySelector(".result-text");
+    if (txt) { txt.textContent = ""; txt.classList.remove("in", "warn"); }
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      if (spin) spin.hidden = true;
+      if (btn) btn.disabled = false;
+      done();
+    }, THINK);
+  }
+
+  function showImage(panel, src) {
+    var img = panel.querySelector(".result-img");
+    img.hidden = false;
+    img.src = src;
+    requestAnimationFrame(function () { img.classList.add("in"); });
+  }
+
+  var PLAY = {
+    fortune: function (panel) {
+      think(panel, function () { showImage(panel, "images/" + rnd(FORTUNES) + ".png"); });
+    },
+    oracle: function (panel) {
+      think(panel, function () { showImage(panel, "images/R" + rnd(ORACLES) + ".png"); });
+    },
+    compat: function (panel) {
+      var a = panel.querySelector("#yourName").value.trim();
+      var b = panel.querySelector("#crushName").value.trim();
+      var out = panel.querySelector(".result-text");
+      if (!a || !b) {
+        out.textContent = "Por favor, ingresa ambos nombres para calcular la compatibilidad.";
+        out.classList.add("in", "warn");
+        return;
+      }
+      think(panel, function () {
+        var score = Math.floor(Math.random() * 101);
+        out.textContent = "¡La compatibilidad entre " + a + " y " + b + " es del " + score + "%!";
+        out.classList.add("in");
+      });
+    },
+    date: function (panel) {
+      think(panel, function () {
+        var d = new Date();
+        d.setDate(d.getDate() + Math.floor(Math.random() * 365) + 1);
+        var box = panel.querySelector(".date-result");
+        panel.querySelector(".date-day").textContent =
+          d.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+        panel.querySelector(".date-event").textContent =
+          EVENTS[Math.floor(Math.random() * EVENTS.length)];
+        box.hidden = false;
+        requestAnimationFrame(function () { box.classList.add("in"); });
+      });
+    }
+  };
+
+  document.querySelectorAll(".game-card").forEach(function (card) {
+    card.addEventListener("click", function () { open(card.dataset.game); });
+  });
+
+  modal.querySelectorAll("[data-close]").forEach(function (el) {
+    el.addEventListener("click", close);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.hidden) close();
+  });
+
+  panels.forEach(function (panel) {
+    var btn = panel.querySelector(".play");
+    if (btn) btn.addEventListener("click", function () { PLAY[panel.dataset.panel](panel); });
+    panel.querySelectorAll("input").forEach(function (input) {
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { e.preventDefault(); btn.click(); }
+      });
+    });
+  });
+})();
+</script>
+</body>
 </html>

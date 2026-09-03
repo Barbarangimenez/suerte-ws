@@ -1,0 +1,54 @@
+SITIO NUEVO — barbarangimenez.com
+=================================
+
+QUÉ HAY AQUÍ
+------------
+Todos los archivos de la web rediseñada. Se suben tal cual, en la RAÍZ del
+hosting (donde hoy está tu index.html actual).
+
+  index.html                  Portada (ES)  · dos caminos: Guionista / Escritora
+  index-en.html               Portada (EN)
+  index-de.html               Portada (DE)
+
+  perfilguionista.html        Guionista (ES)   ← mismo nombre que antes
+  ingles.html                 Guionista (EN)   ← mismo nombre que antes
+  aleman.html                 Guionista (DE)   ← mismo nombre que antes
+
+  lectores.html               Escritora (ES)
+  lectores-en.html            Escritora (EN)   ← nueva
+  lectores-de.html            Escritora (DE)   ← nueva
+  Paratodaslasedades.html     Narrativa para todas las edades + biografía
+  literaturaadolescente.html  Literatura juvenil
+  mordisco.html               El Mordisco de la Polilla
+  aldea-milagrosa.html        La Aldea Milagrosa
+  cuadernodezoe.html          El Cuaderno de Zoe
+  medios.html                 Medios y publicaciones
+  parque-zoe.html             El Parque de Zoe (los 4 juegos, rediseñados)
+
+  assets/site.css             Estilos (un solo archivo)
+  assets/site.js              Interacciones (menú móvil y apariciones)
+
+CÓMO SUBIRLO
+------------
+1. Haz una copia de seguridad de los archivos actuales (por si acaso).
+2. Sube todos los .html a la raíz, reemplazando los existentes.
+3. Sube la carpeta "assets" completa a la raíz.
+4. NO toques la carpeta "images": el sitio nuevo reutiliza tus imágenes
+   actuales, ya están donde tienen que estar.
+5. parque-zoe.html también se reemplaza: los cuatro juegos son los mismos
+   (galleta de la fortuna, compatibilidad, oráculo y fecha especial, con las
+   mismas imágenes y los mismos textos), pero con el diseño nuevo.
+6. Los archivos antiguos styles.css y script.js ya no se usan. Puedes dejarlos
+   donde están: no molestan. Si prefieres limpiar, se pueden borrar una vez que
+   compruebes que todo funciona.
+
+Los nombres de archivo antiguos se mantienen, así que los enlaces que ya
+circulan por internet siguen funcionando.
+
+CONTACTO EN LA WEB
+------------------
+- Guionista: gimenezbarbaran@gmail.com
+- Literatura y pie de página: info@scribeme.net
+Si quieres unificarlo en un solo correo, se cambia en un minuto.
+
+© 2026 Bárbara N. Giménez

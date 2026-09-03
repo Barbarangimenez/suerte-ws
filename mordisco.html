@@ -1,197 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11539197198"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-11539197198');
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Mordisco de la Polilla — Bárbara N. Giménez</title>
+<meta name="description" content="El Mordisco de la Polilla y otros relatos entre lo fantástico y lo absurdo, de Bárbara N. Giménez.">
+<meta name="author" content="Bárbara N. Giménez">
+<link rel="canonical" href="https://www.barbarangimenez.com/mordisco.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="El Mordisco de la Polilla — Bárbara N. Giménez">
+<meta property="og:description" content="El Mordisco de la Polilla y otros relatos entre lo fantástico y lo absurdo, de Bárbara N. Giménez.">
+<meta property="og:url" content="https://www.barbarangimenez.com/mordisco.html">
+<meta property="og:image" content="https://www.barbarangimenez.com/images/mordiscocover.png">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
-    <!-- Favicons -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-    <link rel="manifest" href="images/site.webmanifest">
-    
-    <title>El Mordisco de la Polilla</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Barra de navegación */
-        .navbar {
-            background-color: rgba(67, 93, 118, 1); /* Azul oscuro */
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .navbar li {
-            margin: 0;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Playfair Display', serif; /* Fuente elegante */
-            font-size: 15px; /* Tamaño del texto */
-            font-weight: 500; /* Peso medio */
-            letter-spacing: 1px; /* Espaciado entre letras */
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-            color: #FFD700; /* Dorado claro */
-        }
-    /* Responsivo para móvil */
-    @media (max-width: 768px) {
-        .navbar ul {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .navbar a {
-            font-size: 14px; /* Tamaño reducido en móviles */
-        }
-        .title-container {
-            text-align: center;
-            margin-top: 90px; /* Espaciado debajo del título */
-        }
-
-        .title-image {
-            width: 100%;
-            max-width: 400px; /* Tamaño del título */
-        }
-    }
-        /* Fondo graduado */
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(90deg, #FFDE59, #FF914D);
-            overflow-x: hidden;
-        }
-
-        .main-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Centrar verticalmente */
-            align-items: center; /* Centrar horizontalmente */
-            min-height: 100vh;
-            padding: 40px 20px; /* Espaciado para mover los elementos hacia abajo */
-            background-image: url("images/fondopolilla.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: white;
-        }
-
-        .title-container {
-            text-align: center;
-            margin-bottom: 30px; /* Espaciado debajo del título */
-        }
-
-        .title-image {
-            width: 100%;
-            max-width: 400px; /* Tamaño del título */
-        }
-
-        .content {
-            text-align: center;
-            max-width: 600px; /* Reducir el ancho del contenido */
-        }
-
-        .content-text {
-            font-family: 'Arial', sans-serif;
-            font-size: 20px;
-            line-height: 1.8;
-            color: rgb(255, 255, 255);
-            text-align: justify;
-            background: none; /* Fondo semitransparente */
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px; /* Espaciado debajo del texto */
-        }
-
-        button {
-            padding: 12px 25px;
-            background-color: #435d76; /* Azul oscuro */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #e60000; /* Cambiar a rojo oscuro */
-        }
-        
-            /* Pie de página */
-            footer {
-            background-color: rgba(67, 93, 118, 1);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-            font-size: 14px;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.5;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="Paratodaslasedades.html">BNG</a></li>
-            <li><a href="mordisco.html">El Mordisco de la Polilla</a></li>
-            <li><a href="aldea-milagrosa.html">La Aldea Milagrosa</a></li>
-            <li><a href="medios.html">Medios</a></li>
-        </ul>
+<body class="lit">
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="Paratodaslasedades.html" aria-current="page">Todas las edades</a>
+      <a href="literaturaadolescente.html">Juvenil</a>
+      <a href="medios.html">Medios</a>
+      <span class="lang">
+        <a href="lectores.html" aria-current="true">ES</a>
+        <a href="lectores-en.html">EN</a>
+        <a href="lectores-de.html">DE</a>
+      </span>
     </nav>
-   
-    <section class="main-section">
-        <!-- Contenedor del título -->
-        <div class="title-container">
-            <img src="images/polillatitulo.png" alt="El Mordisco de la Polilla" class="title-image">
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--teal wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Relatos · Chiado Books</span>
+        <h1>El Mordisco<br>de la Polilla</h1>
+        <p class="lead">y otros relatos entre lo fantástico y lo absurdo</p>
+        <div class="pull">
+          <p class="serif-quote">«He sabido por lenguas impertinentes que existe un poeta de inconmensurable y extraordinaria inspiración, cuyos poemas reflejan la armonía absoluta de las letras en su máxima expresión. Sin embargo, no es otra cosa que un farsante. Grandes críticos del canon lo han nombrado, con unanimidad mítica, sublime embajador de todo excelso escrito; sin embargo, su talento se cimienta en la eminente representación del engaño.»</p>
         </div>
-        <!-- Contenedor del texto -->
-        <div class="content">
-            <div class="content-text">
-                Desde sardinas con sueños de grandeza hasta dioses y misterios escondidos en lo ordinario del día a día, cada relato te sumergirá en una atmósfera mágica cargada de ironía, imaginación y sorpresas.  
-                Una colección que desafía el mundo que conocemos y celebra lo extraordinario en lo cotidiano.
-            </div>
-            <button onclick="window.open('https://www.atlanticbooks.es/es/el-mordisco-de-la-polilla-y-otros-relatos-entre-lo-fantasatico-y-lo-absurdo')">Comprar</button>
+        <p>Desde sardinas con sueños de grandeza hasta dioses y misterios escondidos en lo ordinario del día a día, cada relato te sumergirá en una atmósfera mágica cargada de ironía, imaginación y sorpresas. Una colección que desafía el mundo que conocemos y celebra lo extraordinario en lo cotidiano.</p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href="https://www.atlanticbooks.es/es/el-mordisco-de-la-polilla-y-otros-relatos-entre-lo-fantasatico-y-lo-absurdo" target="_blank" rel="noopener">Comprar el libro</a>
+          <a class="btn btn--ghost" href="medios.html">Qué dice la prensa</a>
         </div>
-    </section>
-      <!-- Pie de página -->
-      <footer>
-        <p>© Website de Bárbara N. Giménez.</p>
-        <p>Contacto: info@scribeme.net</p>
-        <p>Todos los derechos reservados.</p>
-        <p>Basilea - Suiza 2024</p>
-    </footer>
+      </div>
+      <div class="book-art reveal" data-delay=".12">
+        <div class="cover"><img src="images/mordiscocover.png" alt="Portada de El Mordisco de la Polilla"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight wrap">
+    <hr class="rule">
+    <div class="contact reveal" style="padding-top:clamp(30px,4vw,52px)">
+      <div><span class="k">Género</span><span class="v">Relato · fantástico y absurdo</span></div>
+      <div><span class="k">Editorial</span><span class="v">Chiado Books</span></div>
+      <div><span class="k">Autora</span><span class="v">Bárbara N. Giménez</span></div>
+    </div>
+    <div class="btn-row reveal">
+      <a class="btn btn--ghost" href="Paratodaslasedades.html">&larr; Volver a los libros</a>
+    </div>
+  </section>
+
+</main>
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+      <p class="foot-legal">© 2026 Bárbara N. Giménez<br>Todos los derechos reservados</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="index.html">Inicio</a>
+      <a href="perfilguionista.html">Guionista</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="medios.html">Medios</a>
+    </nav>
+    <div class="foot-nav">
+      <a href="mailto:info@scribeme.net">info@scribeme.net</a>
+      <p>Basilea, Suiza</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>

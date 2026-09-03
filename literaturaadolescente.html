@@ -1,485 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Literatura Adolescente - Bárbara N. Giménez</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Favicons -->
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-        <link rel="manifest" href="images/site.webmanifest">
-        
-        <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11539197198"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-11539197198');
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literatura juvenil — Bárbara N. Giménez</title>
+<meta name="description" content="El Cuaderno de Zoe y El Parque de Zoe: juegos, secretos e historias mágicas para lectores adolescentes.">
+<meta name="author" content="Bárbara N. Giménez">
+<link rel="canonical" href="https://www.barbarangimenez.com/literaturaadolescente.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Literatura juvenil — Bárbara N. Giménez">
+<meta property="og:description" content="El Cuaderno de Zoe y El Parque de Zoe: juegos, secretos e historias mágicas para lectores adolescentes.">
+<meta property="og:url" content="https://www.barbarangimenez.com/literaturaadolescente.html">
+<meta property="og:image" content="https://www.barbarangimenez.com/images/libro.png">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
-    <style>
-
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        background: linear-gradient(90deg, #FFDE59, #FF914D);
-    }
-
-    footer {
-        background-color: rgba(67, 93, 118, 1);
-        color: white;
-        text-align: center;
-        padding: 30px 20px;
-        margin-top: 50px;
-        font-size: 14px;
-        font-family: 'Arial', sans-serif;
-        line-height: 1.5;
-    }
-
-    footer p {
-        margin: 5px 0;
-    }
-
-    /* Barra de navegación */
-    .navbar {
-        background-color: rgba(67, 93, 118, 1);
-        padding: 15px 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .navbar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .navbar li {
-        margin: 0;
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Playfair Display', serif;
-        font-size: 15px;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
-    .navbar a:hover {
-        text-decoration: underline;
-        color: #FFD700;
-    }
-
-    /* Título */
-    .title-start {
-        text-align: center;
-        margin: 60px auto;
-    }
-
-    .title-start img {
-        width: 100%;
-        max-width: 600px;
-        display: block;
-        margin: 0 auto;
-        visibility: visible;
-    }
-
-    /* Imagen de la escritora */
-    .escritora-section {
-        text-align: center;
-        margin: 80px auto; /* Incrementamos ligeramente el margen para bajar la sección */
-        position: relative;
-    }
-
-    .escritora-section img {
-        max-width: 80%;
-        height: auto;
-        border-radius: 50%;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Flecha para la sección de la escritora */
-    .flecha-gif {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100px;
-        height: auto;
-        cursor: pointer;
-        z-index: 10;
-        display: block;
-    }
-
-    /* Sobre la autora */
-    .author-section {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 30px;
-        margin: 100px auto;
-        max-width: 80%;
-    }
-
-    .author-photo {
-        max-width: 250px;
-        border-radius: 50%;
-    }
-
-    .author-description {
-        font-size: 18px;
-        line-height: 1.6;
-        font-family: 'Playfair Display', serif; 
-        max-width: 600px;
-        text-align: justify;
-    }
-
-    .author-title {
-        font-size: 28px;
-        font-weight: bold;
-        font-family: 'Playfair Display', serif;
-        margin-bottom: 20px;
-    }
-
-    /* Responsivo */
-       @media (max-width: 768px) {
-        .title-start {
-            margin-top: 200px !important; /* Forzar un gran margen superior */
-        }
-
-
-        .title-start img {
-            max-width: 90%;
-        }
-
-        .escritora-section {
-            margin-top: 20px;
-        }
-
-        .escritora-section img {
-            max-width: 90%;
-        }
-
-        .flecha-gif {
-            display: none; /* Ocultar flecha en móviles */
-        }
-
-        .author-section {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 20px;
-        }
-
-        .author-photo {
-            max-width: 80%;
-            margin-bottom: 20px;
-        }
-
-        .author-title {
-            font-size: 22px;
-        }
-
-        .author-description {
-            font-size: 16px;
-            line-height: 1.4;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .title-start {
-            margin-top: 90px; /* Asegurar espacio debajo de la barra */
-        }
-
-        .title-start img {
-            max-width: 95%;
-        }
-
-        .escritora-section {
-            margin-top: 30px; /* Espacio adicional para móviles pequeños */
-        }
-
-        .author-title {
-            font-size: 20px;
-        }
-
-        .author-description {
-            font-size: 14px;
-            line-height: 1.3;
-        }
-    }
-    html, body {
-        overflow-x: hidden;
-    }
-        /* Slideshow */
-    .slideshow-image {
-        width: 260px; /* Establece un ancho fijo */
-        height: 370px; /* Establece una altura fija */
-        object-fit: cover; /* Asegura que la imagen rellene el espacio manteniendo proporciones */
-        border-radius: 10px; /* Opcional: bordes redondeados para estética */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: añade un sombreado */
-    }
-
-    .slideshow-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px; /* Espaciado uniforme entre los elementos */
-    }
-        .slideshow-container {
-            position: relative;
-            margin: 50px auto;
-            max-width: 80%;
-            padding: 10px;
-            background: #f4efde;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .slideshow-text {
-            width: 60%;
-            line-height: 1.8;
-        }
-
-        .slideshow-text h2 {
-            font-size: 30px;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 20px;
-        }
-
-        .slideshow-buttons {
-            margin-top: 20px;
-        }
-
-        .slideshow-buttons a {
-            display: inline-block;
-            text-decoration: none;
-            margin-right: 15px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .btn-buy {
-            background-color: #177277;
-        }
-
-        .btn-buy:hover {
-            background-color: #145e60;
-        }
-
-        .btn-more {
-            background-color: #9aa6a5;
-        }
-
-        .btn-more:hover {
-            background-color: #8a9493;
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .slideshow-container {
-                flex-direction: column; /* Cambiar a diseño vertical en pantallas pequeñas */
-                padding: 20px;
-            }
-
-            .slideshow-image {
-                width: 80%;
-                max-width: 300px;
-                margin: 10px auto;
-            }
-
-            .slideshow-text {
-                width: 100%;
-                text-align: center;
-            }
-
-            .slideshow-text h2 {
-                font-size: 24px; /* Reducir tamaño del título */
-            }
-
-            .slideshow-buttons a {
-                padding: 8px 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .slideshow-text h2 {
-                font-size: 20px; /* Títulos más pequeños */
-            }
-
-            .slideshow-buttons a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-        @media (max-width: 768px) {
-        .navbar ul {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .navbar a {
-            font-size: 14px;
-        }
-
-        .title-start img {
-            max-width: 90%; /* Hacer el título más pequeño en pantallas pequeñas */
-        }
-
-        .author-section {
-            flex-direction: column; /* Cambiar a diseño vertical */
-            align-items: center;
-            text-align: center; /* Centrar texto */
-            gap: 20px;
-        }
-
-        .author-photo {
-            max-width: 80%; /* Imagen más grande en móviles */
-            margin-bottom: 20px;
-        }
-
-        .author-title {
-            font-size: 22px; /* Reducir el tamaño del título */
-        }
-
-        .author-description {
-            font-size: 16px; /* Reducir tamaño del texto */
-            line-height: 1.4;
-        }
-
-        .slideshow-container {
-            flex-direction: column; /* Cambiar a diseño vertical en pantallas pequeñas */
-            padding: 20px;
-        }
-
-        .slideshow-image {
-            width: 80%;
-            max-width: 300px;
-            margin: 10px auto;
-        }
-
-        .slideshow-text {
-            width: 100%;
-            text-align: center;
-        }
-
-        .slideshow-text h2 {
-            font-size: 24px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .navbar a {
-            font-size: 12px;
-        }
-
-        .title-start img {
-            max-width: 100%;
-        }
-
-        .author-title {
-            font-size: 20px; /* Título más pequeño */
-        }
-
-        .author-description {
-            font-size: 14px;
-            line-height: 1.3;
-        }
-
-        .slideshow-text h2 {
-            font-size: 20px;
-        }
-    }
-
-        html, body {
-            overflow-x: hidden; /* Prevenir overflow horizontal */
-        }
-    </style>
-</head>
-<body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="literaturaadolescente.html">BNG</a></li>
-            <li><a href="parque-zoe.html">El Parque de Zoe</a></li>
-            <li><a href="cuadernodezoe.html">El cuaderno de Zoe</a></li>
-        </ul>
+<body class="lit">
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="cuadernodezoe.html">El Cuaderno de Zoe</a>
+      <a href="parque-zoe.html">El Parque de Zoe</a>
+      <a href="medios.html">Medios</a>
+      <span class="lang">
+        <a href="lectores.html" aria-current="true">ES</a>
+        <a href="lectores-en.html">EN</a>
+        <a href="lectores-de.html">DE</a>
+      </span>
     </nav>
+  </div>
+</header>
 
-    <!-- Título -->
-    <div class="title-start">
-        <img src="images/titulostart.png" alt="Título Start">
-    </div>
+<main>
 
-    <!-- Imagen circular de la escritora -->
-    <div class="escritora-section">
-        <img src="images/escritora.png" alt="Imagen de la Escritora">
-        <a href="#sobre-la-autora" class="flecha-gif-link">
-            <img src="images/flecha.gif" alt="Ir a Sobre la Autora" class="flecha-gif">
-        </a>
-    </div>
-    
-    <section id="sobre-la-autora" class="author-section">
-        <img src="images/Fotoautor.png" alt="Foto de la autora" class="author-photo">
-        <div>
-            <h2 class="author-title">Sobre la Autora</h2>
-            <p class="author-description">
-                Me encanta escribir y adoro las historias mágicas y fantásticas. Desde el momento en que aprendí a trazar el alfabeto en un papel, comencé a crear ficción de todo tipo. Curiosamente, empecé con teatro (¿quién empieza con teatro?), y luego seguí con poemas, cuentos y novelas.
-                Durante mi adolescencia, solía coleccionar juegos, trucos, dichos y cosas de chicas en un cuaderno cuadriculado, donde también guardaba mis recuerdos y secretos más preciados. El Cuaderno de Zoe fue mi primer libro para adolescentes, nacido un poco de la nostalgia por aquel hábito tan divertido y otro poco por... exactamente lo mismo.
-            </p>
+  <section class="hero hero--teal wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Literatura juvenil</span>
+        <h1>Juegos, secretos<br>y un poco de magia.</h1>
+        <p class="lead">«Me encanta escribir y adoro las historias mágicas y fantásticas. Desde el momento en que aprendí a trazar el alfabeto en un papel, comencé a crear ficción de todo tipo. Curiosamente, empecé con teatro (¿quién empieza con teatro?), y luego seguí con poemas, cuentos y novelas.»</p>
+        <p>Durante mi adolescencia solía coleccionar juegos, trucos, dichos y cosas de chicas en un cuaderno cuadriculado, donde también guardaba mis recuerdos y secretos más preciados. <em>El Cuaderno de Zoe</em> fue mi primer libro para adolescentes, nacido un poco de la nostalgia por aquel hábito tan divertido y otro poco por… exactamente lo mismo.</p>
+        <div class="btn-row">
+          <a class="btn" href="cuadernodezoe.html">El libro</a>
+          <a class="btn btn--ghost" href="parque-zoe.html">Los juegos</a>
         </div>
-    </section>
+      </div>
+      <div class="portrait reveal" data-delay=".12">
+        <img src="images/Fotoautor.png" alt="Bárbara N. Giménez">
+      </div>
+    </div>
+  </section>
 
-    
-    <!-- Pie de página -->
-    <footer>
-        <p>© Website de Bárbara N. Giménez.</p>
-        <p>Contacto: info@scribeme.net</p>
-        <p>Todos los derechos reservados.</p>
-        <p>Basilea - Suiza 2024</p>
-    </footer>    
+  <section class="section wrap">
+    <span class="eyebrow reveal">El universo Zoe</span>
+    <h2 class="reveal">Un libro y un parque de juegos</h2>
 
-    <script>
-        // Lógica para slideshow automático
-        const slides = document.querySelectorAll('.slideshow-container');
-        let currentSlide = 0;
+    <article class="book reveal">
+      <div class="book-art">
+        <a class="cover" href="cuadernodezoe.html"><img src="images/libro.png" alt="Portada de El Cuaderno de Zoe" loading="lazy"></a>
+      </div>
+      <div>
+        <span class="credit-kind">Novela juvenil · 2ª edición</span>
+        <h3>El Cuaderno de Zoe</h3>
+        <div class="pull">
+          <p class="serif-quote">«Aquí colecciono todo tipo de historias y juegos mágicos y secretos para descubrir tu destino en el amor y en la vida.»</p>
+        </div>
+        <p>Juegos e historias de amor, de suerte y de todo un poco. La mayoría son de conocimiento popular, algunos antiquísimos y otros creados con mi imaginación. Recuerda jugarlos siempre con un guiño de ojo.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://play.google.com/store/books/details?id=0upCEQAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn" href="https://www.amazon.es/dp/B0DWLMDPWB" target="_blank" rel="noopener">Amazon</a>
+          <a class="btn btn--ghost" href="cuadernodezoe.html">Saber más</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'flex' : 'none';
-            });
-        }
+  <div class="split">
+    <a class="split-card split-card--teal reveal" href="parque-zoe.html">
+      <h3>El Parque de Zoe</h3>
+      <p>La galleta de la fortuna, el juego de compatibilidad, el oráculo de sí o no y la fecha especial. Los juegos del cuaderno, para jugar aquí mismo.</p>
+      <span class="more">Jugar &rarr;</span>
+    </a>
+    <a class="split-card split-card--teal reveal" data-delay=".1" href="Paratodaslasedades.html">
+      <h3>¿Y si buscas otra cosa?</h3>
+      <p>También escribo relato fantástico, microteatro y ficción para lectores de todas las edades.</p>
+      <span class="more">Ver la otra estantería &rarr;</span>
+    </a>
+  </div>
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
+</main>
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+      <p class="foot-legal">© 2026 Bárbara N. Giménez<br>Todos los derechos reservados</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="index.html">Inicio</a>
+      <a href="perfilguionista.html">Guionista</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="medios.html">Medios</a>
+    </nav>
+    <div class="foot-nav">
+      <a href="mailto:info@scribeme.net">info@scribeme.net</a>
+      <p>Basilea, Suiza</p>
+    </div>
+  </div>
+</footer>
 
-        // Mostrar la primera diapositiva
-        showSlide(currentSlide);
-
-        // Cambiar cada 10 segundos
-        setInterval(nextSlide, 10000);
-    </script>
+<script src="site.js"></script>
 </body>
 </html>

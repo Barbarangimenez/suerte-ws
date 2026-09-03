@@ -1,224 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bárbara N. Giménez - Screenwriter</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-    <link rel="manifest" href="images/site.webmanifest">    
-
-    <style>
-        body {
-            font-family: 'Courier', monospace;
-            background-color: #141414;
-            color: white;
-            margin: 0;
-            padding: 40px;
-        }
-
-        .volver {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 120px;
-            height: auto;
-            z-index: 1000;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-
-        .text-content {
-            width: 60%;
-            text-align: left;
-            line-height: 1.6;
-        }
-
-        h1 {
-            font-weight: bold;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            margin-top: 40px;
-        }
-
-        .film-block {
-            margin-bottom: 30px;
-        }
-
-        .film-block img {
-            max-width: 250px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-
-        .image-content {
-            width: 35%;
-            text-align: right;
-        }
-
-        .image-content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .contact {
-            margin-top: 30px;
-            font-size: 16px;
-        }
-
-        .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            gap: 15px;
-        }
-
-        .language-switch a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .language-switch a:hover {
-            text-decoration: underline;
-            color: #FFD700;
-        }
-
-        a.video-link {
-            color: #FFD700;
-            text-decoration: none;
-        }
-
-        a.video-link:hover {
-            text-decoration: underline;
-        }
-
-        @media screen and (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .text-content,
-            .image-content {
-                width: 100%;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .language-switch {
-                top: 10px;
-                right: 10px;
-                font-size: 14px;
-            }
-
-            .volver {
-                width: 80px;
-                top: 10px;
-                left: 10px;
-            }
-
-            .contact {
-                font-size: 14px;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screenwriter — Bárbara N. Giménez</title>
+<meta name="description" content="Filmography of Bárbara N. Giménez, screenwriter for film and television: 16 selections at international festivals, with awards in Austin and Alpine.">
+<meta name="author" content="Bárbara N. Giménez">
+<link rel="canonical" href="https://www.barbarangimenez.com/ingles.html">
+<link rel="alternate" hreflang="es" href="https://www.barbarangimenez.com/perfilguionista.html">
+<link rel="alternate" hreflang="en" href="https://www.barbarangimenez.com/ingles.html">
+<link rel="alternate" hreflang="de" href="https://www.barbarangimenez.com/aleman.html">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Screenwriter — Bárbara N. Giménez">
+<meta property="og:description" content="Filmography of Bárbara N. Giménez, screenwriter for film and television: 16 selections at international festivals, with awards in Austin and Alpine.">
+<meta property="og:url" content="https://www.barbarangimenez.com/ingles.html">
+<meta property="og:image" content="https://www.barbarangimenez.com/images/hiddentreasure.png">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-    <a href="index.html">
-        <img src="images/volver.png" alt="Back" class="volver">
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index-en.html" aria-label="Home">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
     </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index-en.html">Home</a>
+      <a href="ingles.html" aria-current="page">Screenwriter</a>
+      <a href="lectores-en.html">Writer</a>
+      <a href="medios.html">Press</a>
+      <a href="#contacto">Contact</a>
+      <span class="lang">
+        <a href="perfilguionista.html">ES</a>
+        <a href="ingles.html" aria-current="true">EN</a>
+        <a href="aleman.html">DE</a>
+      </span>
+    </nav>
+  </div>
+</header>
 
-    <div class="container">
-        <div class="text-content">
-            <h1>Bárbara N. Giménez - Screenwriter</h1>
+<main>
 
-            <p>
-                I am a journalist, sociologist, and philologist by training, with a career that spans from journalistic screenwriting to fiction. 
-                I’ve worked in television as a writer and producer for programs across a range of genres. 
-                In recent years, I’ve focused on literary writing, creating worlds and stories through novels, plays, and short fiction. 
-                Currently, I’m enrolled in the Expert Screenwriting Program at MasterD, specializing in film, television, advertising, video games, and podcasts.
-            </p>
-
-            <h2>Experience</h2>
-
-            <p><strong>Producer and Writer (2005–2007)</strong></p>
-            <p>Content production and writing for various television programs, including comedy, music, children’s, and magazine formats.</p>
-            <p><i>Telefuturo - Asunción, Paraguay</i></p>
-
-            <p><strong>Short Film "Zurücklos" (2010)</strong></p>
-
-            <p><strong>Documentary <i>"Mujeres Gloriosas"</i> (2015)</strong><br>
-                <a href="https://youtu.be/ObcG_N1U4H0" class="video-link" target="_blank">▶ Watch</a>
-            </p>                
-
-            <div class="film-block">
-                <p><strong>Short Film <i>"La Oscuridad"</i> (2025)</strong></p>
-                <img src="images/laoscuridad.png" alt="La Oscuridad">
-                <br>
-                <a href="https://youtu.be/lWEux2xaZDU" class="video-link" target="_blank">▶ Watch</a>
-            </div>
-
-            <div class="film-block">
-                <p><strong>Short Film <i>"Querido Luis"</i> (2025)</strong></p>
-                <img src="images/queridoluis.png" alt="Querido Luis">
-                <p><i>Official Selection – Sweden Film Awards 2025</i></p>
-            </div>
-
-            <div class="film-block">
-                <p><strong>Screenplay <i>"Hidden Treasure"</i> (2025)</strong></p>
-                <img src="images/hiddentreasure.png" alt="Hidden Treasure">
-                <ul>
-                    <li><i>Semi-Finalist – Wiki Screenplay Contest, United States (June 18, 2025)</i></li>
-                    <li><i>Official Selection – Tokyo Film and Screenplay Awards, Japan (August 14, 2025)</i></li>
-                    <li><i>Official Selection – Los Angeles Film and Documentary Awards, United States (August 18, 2025)</i></li>
-                    <li><i>Official Selection – Hollywood Stage Script Film Competition, United States (August 15, 2025)</i></li>
-                </ul>
-            </div>
-
-            <div class="contact">
-                <p><strong>Contact:</strong></p>
-                <p>📌 Bárbara N. Giménez</p>
-                <p>📍 Basel, Switzerland</p>
-                <p>✉️ gimenezbarbaran@gmail.com</p>
-            </div>
-
-            <div class="language-switch">
-                <a href="perfilguionista.html">ES</a>
-                <a href="ingles.html">EN</a>
-                <a href="aleman.html">DE</a>
-            </div>
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Screenwriting · film, television and fiction</span>
+        <h1>Stories that begin<br>on a blank page.</h1>
+        <p class="lead">I am a journalist, sociologist and philologist by training, with a career that spans from journalistic screenwriting to fiction. I’ve worked in television as a writer and producer for programs across a range of genres. In recent years I’ve focused on literary writing, creating worlds and stories through novels, plays and short fiction. I am currently enrolled in the Expert Screenwriting Program at MasterD, specializing in film, television, advertising, video games and podcasts.</p>
+        <ul class="meta-list">
+          <li><b>Based in</b> Basel, Switzerland</li>
+          <li><b>Studies</b> Communication Sciences · Hispanic Philology · Sociology</li>
+          <li><b>Currently</b> Expert Screenwriting Program, MasterD</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href="#trayectoria">See the work</a>
+          <a class="btn btn--ghost" href="#contacto">Contact</a>
         </div>
-
-        <img src="images/circulo.png" alt="Circle"
-        style="width: 300px; height: auto; display: block; margin: 20px auto;"> 
+      </div>
+      <div class="portrait portrait--round reveal" data-delay=".12">
+        <img src="images/escritora.png" alt="Illustration of Bárbara N. Giménez writing">
+      </div>
     </div>
+  </section>
 
+  <section class="section--tight wrap">
+    <hr class="rule">
+    <div style="padding-top:clamp(28px,4vw,48px)">
+      <span class="eyebrow reveal">Awards &amp; selections 2025 — 2026</span>
+      <div class="stats reveal">
+        <div class="stat"><b>2</b><span>awards</span></div>
+        <div class="stat"><b>2</b><span>nominations</span></div>
+        <div class="stat"><b>7</b><span>semi-finals</span></div>
+        <div class="stat"><b>5</b><span>official selections</span></div>
+      </div>
+      <p class="stats-note reveal">16 festival selections across Europe, the Americas and Asia, with four projects currently touring.</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="trayectoria">
+    <span class="eyebrow reveal">Experience</span>
+    <h2 class="reveal">Filmography</h2>
+
+    <div class="credits">
+
+      <article class="credit reveal">
+        <div class="credit-year">2025</div>
+        <div>
+          <span class="credit-kind">Feature screenplay</span>
+          <h3><em>Hidden Treasure</em></h3>
+          <div class="credit-body">
+            <div>
+              <ul class="laurels">
+                <li><b>Award Winner</b> — Alpine International Film Festival <span>(April 15, 2026)</span></li>
+                <li><b>Nominee</b> — Cannes Film Awards, France <span>(May 4, 2026)</span></li>
+                <li><b>Nominee</b> — London Directors’ Talents, United Kingdom <span>(January 20, 2026)</span></li>
+                <li><b>Semi-Finalist</b> — Palermo International Film Festival, Italy <span>(November 13, 2025)</span></li>
+                <li><b>Semi-Finalist</b> — Wiki: The World’s Fastest Screenplay Contest, United States <span>(June 18, 2025)</span></li>
+                <li><b>Official Selection</b> — RED MOVIE AWARDS <span>(2026)</span></li>
+                <li><b>Official Selection</b> — Tokyo Film and Screenplay Awards, Japan <span>(August 14, 2025)</span></li>
+                <li><b>Official Selection</b> — Los Angeles Film and Documentary Awards, United States <span>(August 15, 2025)</span></li>
+                <li><b>Official Selection</b> — Hollywood Stage Script Film Competition, United States <span>(August 15, 2025)</span></li>
+              </ul>
+            </div>
+            <div class="poster"><img src="images/hiddentreasure.png" alt="Hidden Treasure poster" loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2025</div>
+        <div>
+          <span class="credit-kind">Short film</span>
+          <h3><em>The Darkness</em></h3>
+          <div class="credit-body">
+            <div>
+              <ul class="laurels">
+                <li><b>Award Winner</b> — Austin International Art Festival, United States <span>(January 19, 2026)</span></li>
+                <li><b>Semi-Finalist</b> — Rotterdam Independent Film Festival, Netherlands <span>(March 7, 2026)</span></li>
+                <li><b>Semi-Finalist</b> — Rio de Janeiro World Film Festival, Brazil <span>(December 16, 2025)</span></li>
+                <li><b>Official Selection</b> — International Kolkata Short Film Festival, India <span>(January 15, 2026)</span></li>
+              </ul>
+              <a class="watch" href="https://youtu.be/lWEux2xaZDU" target="_blank" rel="noopener">▶ Watch the short</a>
+            </div>
+            <div class="poster"><img src="images/laoscuridad.png" alt="The Darkness poster" loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2025</div>
+        <div>
+          <span class="credit-kind">Short film</span>
+          <h3><em>You Understand Me, Right?</em></h3>
+          <div class="credit-body no-art">
+            <div>
+              <ul class="laurels">
+                <li><b>Semi-Finalist</b> — Rotterdam Independent Film Festival, Netherlands <span>(March 7, 2026)</span></li>
+                <li><b>Semi-Finalist</b> — Paris Lady MovieMakers Festival, France <span>(December 15, 2025)</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2025</div>
+        <div>
+          <span class="credit-kind">Short film</span>
+          <h3><em>Dear Luis</em></h3>
+          <div class="credit-body">
+            <div>
+              <ul class="laurels">
+                <li><b>Semi-Finalist</b> — Sweden Film Awards, Sweden <span>(September 6, 2025)</span></li>
+              </ul>
+            </div>
+            <div class="poster"><img src="images/queridoluis.png" alt="Dear Luis poster" loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2015</div>
+        <div>
+          <span class="credit-kind">Documentary</span>
+          <h3><em>Mujeres Gloriosas</em></h3>
+          <div class="credit-body no-art">
+            <div>
+              <a class="watch" href="https://youtu.be/ObcG_N1U4H0" target="_blank" rel="noopener">▶ Watch the documentary</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2010</div>
+        <div>
+          <span class="credit-kind">Short film</span>
+          <h3><em>Zurücklos</em></h3>
+        </div>
+      </article>
+      <article class="credit reveal">
+        <div class="credit-year">2005 — 2007</div>
+        <div>
+          <span class="credit-kind">Television · producer and writer</span>
+          <h3>Telefuturo, Asunción</h3>
+          <div class="credit-body no-art">
+            <p>Content production and writing for various television programs, including comedy, music, children’s and magazine formats.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section--tight wrap" id="contacto">
+    <hr class="rule">
+    <div style="padding-top:clamp(28px,4vw,48px)">
+      <span class="eyebrow reveal">Contact</span>
+      <h2 class="reveal">Let’s talk about a project.</h2>
+      <div class="contact reveal">
+        <div><span class="k">Name</span><span class="v">Bárbara N. Giménez</span></div>
+        <div><span class="k">Based in</span><span class="v">Basel, Switzerland</span></div>
+        <div><span class="k">Email</span><a class="v" href="mailto:gimenezbarbaran@gmail.com">gimenezbarbaran@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+      <p class="foot-legal">© 2026 Bárbara N. Giménez<br>All rights reserved</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="index-en.html">Home</a>
+      <a href="ingles.html">Screenwriter</a>
+      <a href="lectores-en.html">Writer</a>
+      <a href="medios.html">Press</a>
+    </nav>
+    <div class="foot-nav">
+      <a href="mailto:gimenezbarbaran@gmail.com">gimenezbarbaran@gmail.com</a>
+      <p>Basel, Switzerland</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>

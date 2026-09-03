@@ -1,127 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mis lectores - Bárbara N. Giménez</title>
-    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="192x192" href="images/android-chrome-192x192.png">
-<link rel="manifest" href="images/site.webmanifest">
-
-    <style>
-        /* Reset general */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* Contenedor principal dividido en dos */
-        .split-container {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-        }
-
-        /* Lados izquierdo y derecho */
-        .split {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        /* Colores de fondo */
-        .left {
-            background-color: #0e4149;
-            color: white;
-        }
-
-        .right {
-            background-color: #ffca30;
-            color: white;
-        }
-
-        /* Imágenes principales (AUMENTADAS) */
-        .split img {
-            max-width: 90%; /* Antes era 80%, ahora más grande */
-            height: auto;
-        }
-
-        /* Texto en Suez One (AUMENTADO) */
-        .split h2 {
-            font-family: 'Suez One', serif;
-            font-size: 42px; /* Antes era 36px, ahora más grande */
-            margin-top: 30px;
-        }
-
-        /* Enlaces */
-        .split a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .split a:hover {
-            color: #FFD700; /* Efecto al pasar el mouse */
-        }
-
-        /* Posición especial del texto en la derecha */
-        .top-text {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 42px; /* Aumentado */
-            font-family: 'Suez One', serif;
-        }
-        .top-text a {
-    color: #0e4149 !important;
-}
-.top-text a:hover {
-    color: #FFD700; /* Efecto al pasar el mouse */
-}
-
-        /* Estilo para el botón de volver */
-        .volver {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 120px; /* Antes 100px, ahora más grande */
-            height: auto;
-            z-index: 1000;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escritora — Bárbara N. Giménez</title>
+<meta name="description" content="La obra literaria de Bárbara N. Giménez: relato, microteatro y literatura juvenil. Narrativa entre lo cotidiano, lo fantástico y lo absurdo.">
+<meta name="author" content="Bárbara N. Giménez">
+<link rel="canonical" href="https://www.barbarangimenez.com/lectores.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Escritora — Bárbara N. Giménez">
+<meta property="og:description" content="La obra literaria de Bárbara N. Giménez: relato, microteatro y literatura juvenil. Narrativa entre lo cotidiano, lo fantástico y lo absurdo.">
+<meta property="og:url" content="https://www.barbarangimenez.com/lectores.html">
+<meta property="og:image" content="https://www.barbarangimenez.com/images/mordiscocover.png">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
-<body>
-
-    <!-- Botón de volver a la página inicial -->
-    <a href="index.html">
-        <img src="./images/volver.png" alt="Volver" class="volver">
+<body class="lit">
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
     </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="perfilguionista.html">Guionista</a>
+      <a href="lectores.html" aria-current="page">Escritora</a>
+      <a href="medios.html">Medios</a>
+      <span class="lang">
+        <a href="lectores.html" aria-current="true">ES</a>
+        <a href="lectores-en.html">EN</a>
+        <a href="lectores-de.html">DE</a>
+      </span>
+    </nav>
+  </div>
+</header>
 
-    <!-- Contenedor dividido -->
-    <div class="split-container">
-        <!-- Lado Izquierdo: Lectores adultos -->
-        <div class="split left">
-            <img src="images/adultos.png" alt="Lectores de todas las edades">
-            <h2><a href="Paratodaslasedades.html">Para todas las edades...</a></h2>
-        </div>
+<main>
 
-        <!-- Lado Derecho: Lectores adolescentes -->
-        <div class="split right">
-            <h2 class="top-text"><a href="literaturaadolescente.html">y para los más jóvenes.</a></h2>
-            <img src="images/adolescentes.png" alt="Lectores adolescentes">
-        </div>
+  <section class="hero hero--teal wrap">
+    <div class="reveal">
+      <span class="eyebrow">Literatura</span>
+      <h1>Para mis lectores.</h1>
+      <p class="lead">Escribo desde que aprendí a trazar el alfabeto en un papel. Relatos, microteatro y novela juvenil: mundos donde lo insólito y lo místico revelan la esencia de lo humano. Elegí por dónde empezar.</p>
     </div>
+  </section>
 
+  <div class="split">
+    <a class="split-card reveal" href="Paratodaslasedades.html">
+      <img src="images/mordiscocover.png" alt="" loading="lazy" style="width:clamp(96px,11vw,132px);border-radius:2px">
+      <h3>Para todas las edades</h3>
+      <p>Relato fantástico y absurdo, microteatro y las antologías donde han aparecido mis cuentos.</p>
+      <span class="more">Entrar &rarr;</span>
+    </a>
+    <a class="split-card split-card--teal reveal" data-delay=".1" href="literaturaadolescente.html">
+      <img src="images/libro.png" alt="" loading="lazy" style="width:clamp(96px,11vw,132px);border-radius:2px">
+      <h3>Y para los más jóvenes</h3>
+      <p>El Cuaderno de Zoe y su parque de juegos: historias, secretos y magia para lectores adolescentes.</p>
+      <span class="more">Entrar &rarr;</span>
+    </a>
+  </div>
+
+  <section class="section wrap-narrow">
+    <span class="eyebrow reveal">Sobre la autora</span>
+    <p class="lead reveal">Bárbara N. Giménez es una escritora argentino-suiza nacida en Buenos Aires en 1983 y criada en Paraguay. Estudió Ciencias de la Comunicación en Paraguay y, tras trabajar en medios, se trasladó a Suiza en 2007, donde se formó en Filología Hispánica y Sociología en la Universidad de Basilea.</p>
+    <div class="btn-row reveal">
+      <a class="btn" href="Paratodaslasedades.html#sobre-la-autora">Leer la biografía completa</a>
+      <a class="btn btn--ghost" href="medios.html">Medios y publicaciones</a>
+    </div>
+  </section>
+
+</main>
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="images/blanco.png" alt="Bárbara N. Giménez">
+      <p class="foot-legal">© 2026 Bárbara N. Giménez<br>Todos los derechos reservados</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="index.html">Inicio</a>
+      <a href="perfilguionista.html">Guionista</a>
+      <a href="lectores.html">Escritora</a>
+      <a href="medios.html">Medios</a>
+    </nav>
+    <div class="foot-nav">
+      <a href="mailto:info@scribeme.net">info@scribeme.net</a>
+      <p>Basilea, Suiza</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>
